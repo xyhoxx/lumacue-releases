@@ -45,9 +45,9 @@ A shortcut is added to your Desktop and Start Menu.
 
 LumaCue checks for updates automatically every time you open it:
 
-1. **Version check** -- compares your installed version against the latest release
-2. **Patch download** -- downloads only the changed files (usually a few MB, not the full app)
-3. **Apply and launch** -- updates silently and opens the app right after
+1. **Version check** │ compares your installed version against the latest release
+2. **Patch download** │ downloads only the changed files (usually a few MB, not the full app)
+3. **Apply and launch** │ updates silently and opens the app right after
 
 No restarts, no prompts. Just open LumaCue and it stays current.
 
