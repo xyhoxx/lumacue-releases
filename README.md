@@ -1,65 +1,221 @@
 # LumaCue
 
-Song request management for Twitch streamers. Windows desktop app with automatic updates.
+LumaCue is a local Windows desktop app for Twitch song requests, queue control, and OBS overlays. It runs a Python backend locally, wraps the control surface in an Electron desktop shell, and keeps OBS/browser URLs stable for streaming.
 
----
+## What LumaCue Does
 
-## Download
+- Accepts song requests from the desktop Quick Add panel, web player, Streamer.bot, and Twitch Channel Points.
+- Resolves songs through YouTube Music / YouTube with ranking, fallbacks, and local learned rules.
+- Supports Spotify track links by reading public Spotify embed metadata and resolving the matching playable track.
+- Plays normal YouTube embeds and can fall back to direct audio for embed-blocked videos through yt-dlp.
+- Provides OBS overlays for now-playing and queue display.
+- Includes a desktop shell with queue drawer, command palette, Twitch setup, About / Updates, and launcher-based updates.
+- Supports Twitch Device Code login for broadcaster and bot accounts without storing a client secret.
+- Stores queue, overlay settings, learned rules, and Twitch configuration locally.
 
-| Installer | Size | Best for |
-|-----------|------|----------|
-| [**LumaCue-Setup-Online.exe**](https://github.com/xyhoxx/lumacue-releases/releases/latest/download/LumaCue-Setup-Online.exe) | ~66 KB | Most users. Small download, gets the rest from the internet |
-| [LumaCue-Setup-Offline-x.x.x.exe](https://github.com/xyhoxx/lumacue-releases/releases/latest) | ~700 MB | No internet at install time. Everything bundled |
+## Current Release
 
----
+The desktop package version is managed in `desktop/package.json`.
 
-## Installing (Online Installer)
+Public built artifacts are published to:
 
-1. Download **LumaCue-Setup-Online.exe** from the link above
-2. Double-click the file. A dark setup window appears immediately
-3. The installer downloads and extracts the app in the background (~138 MB)
-4. LumaCue launches automatically when done
+- `xyhoxx/lumacue-releases`
 
-No admin rights required. Installs to `%LOCALAPPDATA%\Programs\LumaCue`.  
-A shortcut is added to your Desktop and Start Menu.
+The source repository is separate from the public release-artifact repository.
 
----
+## Requirements
 
-## Installing (Offline Installer)
+### Installed App
 
-1. Download **LumaCue-Setup-Offline-x.x.x.exe** from the [latest release](https://github.com/xyhoxx/lumacue-releases/releases/latest)
-2. Double-click and follow the installer
-3. LumaCue launches automatically after installation
+- Windows.
+- Internet access for first install and updates.
+- Twitch Affiliate or Partner status is required for Channel Points custom rewards.
+- OBS Browser Source for stream overlays.
 
----
+### Development
 
-## System Requirements
+- Windows / PowerShell.
+- The project-local portable Python runtime in `python_portable/`.
+- Node.js and npm for the Electron desktop package.
+- Python dependencies from `requirements.txt`.
 
-- Windows 10 (1903 or later) or Windows 11
-- Internet connection *(Online installer and auto-update only)*
-- .NET Framework 4.8 (pre-installed on Windows 10 1903+ and all Windows 11 versions)
+## Running Locally
 
----
+From the project root:
 
-## Auto-Update
+```powershell
+.\run.bat
+```
 
-LumaCue checks for updates automatically every time you open it:
+Useful local URLs:
 
-1. **Version check** │ compares your installed version against the latest release
-2. **Patch download** │ downloads only the changed files (usually a few MB, not the full app)
-3. **Apply and launch** │ updates silently and opens the app right after
+- Player: `http://localhost:5000/player.html`
+- OBS player overlay: `http://127.0.0.1:5000/overlay-player.html`
+- Overlay settings: `http://localhost:5000/overlay-settings.html`
+- Queue-only overlay: `http://localhost:5000/overlay-queue`
+- Resolver debug: `http://localhost:5000/request/resolve?q=<query>`
 
-No restarts, no prompts. Just open LumaCue and it stays current.
+The fixed OBS URL is:
 
-> **Note:** The launcher itself (`%LOCALAPPDATA%\Programs\LumaCue\LumaCue.exe`) does not self-update.  
-> If a launcher update is released, re-running the online installer will apply it.
+```text
+http://127.0.0.1:5000/overlay-player.html
+```
 
----
+Do not change this URL without updating OBS setup documentation and compatibility notes.
 
-## Uninstall
+## Desktop Development
 
-Go to **Settings > Apps** (or Control Panel > Programs and Features), find **LumaCue**, and click Uninstall.
+Run the Electron shell in development mode:
 
----
+```powershell
+npm --prefix .\desktop run dev
+```
 
-*This repository contains built release artifacts only. Source code is private.*
+Run the custom launcher directly:
+
+```powershell
+npm --prefix .\desktop run dev:launcher
+```
+
+Build an unpacked desktop app:
+
+```powershell
+npm --prefix .\desktop run build:dir
+```
+
+Build the installer and update packages:
+
+```powershell
+npm --prefix .\desktop run build:release
+```
+
+Publish built release artifacts:
+
+```powershell
+npm --prefix .\desktop run publish:github
+```
+
+Full release pipeline:
+
+```powershell
+npm --prefix .\desktop run release
+```
+
+## CI/CD Release Flow
+
+GitHub Actions release automation is defined in `.github/workflows/release.yml`.
+
+The workflow runs when:
+
+- A version tag such as `v0.3.0` is pushed.
+- The workflow is started manually from the GitHub Actions tab.
+
+Release tags must match `desktop/package.json`. For example, package version `0.3.0` must be released with tag `v0.3.0`.
+
+The release job runs on the self-hosted Windows runner because the build needs the local `python_portable/` runtime. The publish step uploads release assets to `xyhoxx/lumacue-releases` and updates public release notes from `CHANGELOG.md`.
+
+## Update System
+
+LumaCue uses a custom launcher in front of the packaged app.
+
+Current release assets can include:
+
+- Offline installer: `LumaCue-Setup-Offline-<version>.exe`
+- Online setup stub, when built by the setup script.
+- Full app package: `LumaCue-win-x64-<version>.zip`
+- App-only package: `LumaCue-app-win-x64-<version>.zip`
+- Runtime package: `LumaCue-runtime-win-x64-<version>.zip`
+- Patch package: `LumaCue-patch-<from>-to-<version>.zip`
+- Manifest: `lumacue-update.json`
+- Electron updater metadata: `latest.yml`
+
+The manifest keeps a full package fallback for older launchers. New launchers can use app-only and runtime-split packages.
+
+## Twitch Setup
+
+LumaCue uses Twitch Device Code Flow. No client secret is stored in the app.
+
+Required accounts:
+
+- Broadcaster: manages Channel Points rewards and redemption state.
+- Bot: sends chat replies and listens for chat responses when viewers need to choose between ambiguous songs.
+
+Broadcaster scopes:
+
+- `channel:manage:redemptions`
+- `channel:read:redemptions`
+- `channel:bot`
+
+Bot scopes:
+
+- `user:read:chat`
+- `user:write:chat`
+- `user:bot`
+
+Channel Points custom rewards require the broadcaster channel to have Twitch Affiliate or Partner status.
+
+## Local Data
+
+Local state is intentionally not committed.
+
+Common state files:
+
+- `queue_state.json`
+- `saved_songs.json`
+- `overlay_settings.json`
+- `overlay_presets.json`
+- `overlay_visual_preset_overrides.json`
+- `lumacue_learning.json`
+- `twitch_config.json`
+
+Packaged desktop builds store backend state under the app user data directory rather than inside the installed program folder.
+
+## Tests and Checks
+
+Python tests:
+
+```powershell
+.\python_portable\python.exe -m unittest discover -s tests
+```
+
+Compile key Python files:
+
+```powershell
+.\python_portable\python.exe -m py_compile app.py state.py twitch_integration.py tui.py
+```
+
+Updater tests:
+
+```powershell
+npm --prefix .\desktop run test:updater
+```
+
+Renderer smoke QA:
+
+```powershell
+npm --prefix .\desktop run qa:renderer
+```
+
+## Troubleshooting
+
+### Twitch says Client-ID does not match
+
+The saved Twitch login was created with a different Twitch Client ID than the built-in LumaCue Twitch app. Log out and reconnect the broadcaster and bot accounts, then sync the reward again.
+
+### Channel Points reward cannot be created
+
+Twitch only allows custom Channel Points rewards on Affiliate or Partner channels.
+
+### A YouTube song skips
+
+Some videos require sign-in, are age-restricted, or block playback paths. LumaCue handles embed-blocked videos with direct audio where possible, but sign-in-only videos cannot be played reliably.
+
+### OBS overlay is blank
+
+Confirm the backend is running and use:
+
+```text
+http://127.0.0.1:5000/overlay-player.html
+```
+
+If OBS is using another URL or a stale browser source cache, refresh the Browser Source.
