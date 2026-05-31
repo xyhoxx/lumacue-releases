@@ -2,6 +2,19 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.3.3 - Resolver and Redemption Audit
+
+### Fixed
+- Kept Twitch Channel Points artist-choice requests on the same auto-refund lifecycle as normal requests. When auto-refund is enabled, a selected song is fulfilled only after it actually starts playing.
+- Fixed resolver score diagnostics so the displayed component breakdown uses the same scoring source as the selected song score, including the version-artist mismatch penalty.
+
+### Changed
+- Consolidated resolver scoring into a single component source used by ranking and debug output.
+- Removed unused legacy resolver/artwork helper code that had no callers.
+
+### Documentation
+- Added internal documentation for resolver scoring rules and Twitch redemption lifecycle behavior.
+
 ## 0.3.2 - Play Analytics
 
 ### Added
