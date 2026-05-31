@@ -157,6 +157,13 @@ Product release notes for LumaCue desktop builds. Public releases contain built 
 - Refreshed expired Twitch tokens before EventSub reconnects.
 - Made EventSub stop signals interrupt reconnect sleep.
 
+## 0.2.6 - EventSub Reconnect Stability
+
+### Fixed
+- Added cooldown handling for Twitch EventSub 429 rate-limit responses.
+- Refreshed expired Twitch tokens at startup and before EventSub reconnects.
+- Made EventSub worker stop signals interrupt reconnect sleep promptly.
+
 ## 0.2.5 - Thai Split Search Fallback
 
 ### Fixed
