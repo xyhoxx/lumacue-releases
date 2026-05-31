@@ -2,6 +2,16 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.3.1 - Auto-Refund Channel Points
+
+### Added
+- Channel-point redemptions are now refunded automatically when a song never plays — skipped, removed, queue cleared, or unplayable (e.g. age-restricted).
+- Redemptions are fulfilled only once the song actually starts playing (works for both the normal player and the yt-dlp direct-audio fallback); songs that play even briefly are not refunded.
+- Added a toggle in the Twitch panel's Redemptions card (default on). Pending redemptions persist across restarts.
+
+### Notes
+- With the toggle off, redemptions are fulfilled at queue time, as before.
+
 ## 0.3.0 - Spotify Link Requests
 
 ### Added
