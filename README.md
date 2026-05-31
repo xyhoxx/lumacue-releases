@@ -204,6 +204,11 @@ Renderer smoke QA:
 npm --prefix .\desktop run qa:renderer
 ```
 
+## Internal Docs
+
+- Resolver scoring: `docs/resolver-scoring.md`
+- Twitch redemption lifecycle: `docs/redemption-lifecycle.md`
+
 ## Troubleshooting
 
 ### Twitch says Client-ID does not match
