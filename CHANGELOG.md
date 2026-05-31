@@ -5,7 +5,8 @@ Product release notes for LumaCue desktop builds. Public releases contain built 
 ## 0.3.4 - Resolver Cleanup Follow-up
 
 ### Changed
-- Removed the unused `_embed_retry` parameter and its stale docstring from the song resolver entry point, completing the 0.3.3 audit cleanup.
+- Completed a small song-resolver cleanup pass after the 0.3.3 audit.
+- No user-facing playback, queue, Twitch, or update behavior changed in this release.
 
 ## 0.3.3 - Resolver and Redemption Audit
 
