@@ -114,6 +114,14 @@ Release tags must match `desktop/package.json`. For example, package version `0.
 
 The release job runs on the self-hosted Windows runner because the build needs the local `python_portable/` runtime. The publish step uploads release assets to `xyhoxx/lumacue-releases` and updates public release notes from `CHANGELOG.md`.
 
+Documentation-only release note sync is handled by `.github/workflows/release-notes.yml`. It runs when README, CHANGELOG, or the sync script changes, and it can be started manually from the GitHub Actions tab. This workflow updates the public release repository README, CHANGELOG, and every existing GitHub release page that has a matching section in `CHANGELOG.md`.
+
+Run the same sync locally:
+
+```powershell
+npm --prefix .\desktop run sync:release-notes
+```
+
 ## Update System
 
 LumaCue uses a custom launcher in front of the packaged app.
