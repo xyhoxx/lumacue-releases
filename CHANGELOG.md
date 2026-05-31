@@ -2,6 +2,16 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.3.2 - Play Analytics
+
+### Added
+- New **Play Analytics** panel (sidebar → Play Analytics): total plays, unique songs, and unique requesters at a glance, plus ranked top songs, top artists, and top requesters with bar charts, and a recent-plays list.
+- Every song that actually plays is logged to local play history (`play_history.jsonl`); a song that's skipped or fails before playing is not counted.
+- **Export CSV** of the full play history, and **Clear history** to reset it.
+
+### Notes
+- History is stored locally only; nothing is uploaded.
+
 ## 0.3.1 - Auto-Refund Channel Points
 
 ### Added
