@@ -2,7 +2,7 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
-## 0.4.0 - Backend Startup Hotfix
+## 0.3.5 - Backend Startup Hotfix
 
 ### Fixed
 - Fixed the packaged backend exiting immediately on launch ("LumaCue backend stopped"). The Play Analytics module (`history.py`, added in 0.3.2) was never bundled with the installer, so the backend crashed on startup with a missing-module error. It is now included in the build.
