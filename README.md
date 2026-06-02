@@ -63,6 +63,47 @@ http://127.0.0.1:5000/overlay-player.html
 
 Do not change this URL without updating OBS setup documentation and compatibility notes.
 
+## Discord Rich Presence
+
+The desktop app supports Discord Rich Presence with LumaCue's Discord Application Client ID:
+
+```text
+1134559899351793695
+```
+
+Discord displays the application name and default icon from Discord Developer Portal. Rename that application to `LumaCue` and set its application icon there if Discord still shows an old bot/app name.
+
+Override it for local development with an environment variable:
+
+```powershell
+$env:LUMACUE_DISCORD_CLIENT_ID = "1134559899351793695"
+npm --prefix .\desktop run dev
+```
+
+For installed builds, an override can be placed in the desktop user-data config file:
+
+```text
+%APPDATA%\LumaCue\discord-rpc.json
+```
+
+Example:
+
+```json
+{
+  "enabled": true,
+  "clientId": "1134559899351793695",
+  "largeImageKey": "lumacue",
+  "largeImageText": "LumaCue"
+}
+```
+
+Set `LUMACUE_DISCORD_RPC=0` to force-disable the integration for a run.
+
+The current track artwork is sent as the large Rich Presence image when Discord accepts the HTTPS artwork URL. The artwork image is not made clickable; the track title can link to YouTube when a video ID is available. `largeImageKey` is used as the small/fallback app image; the default key is `lumacue`, so upload a Rich Presence asset with key `lumacue` to replace the generic Discord application icon.
+When the broadcaster is offline, the visible Discord card is kept close to a music-player layout: song title, artist, and progress. Requester context is moved to the small LumaCue icon hover text so the card stays clean.
+
+When the connected Twitch broadcaster account is live, LumaCue switches its Discord activity type to `Streaming` with the broadcaster's Twitch URL. The visible card uses the stream title and stream thumbnail as the primary presentation, then shows the current song, artist, requester, and song progress in the playback context line when a song is active. If no song is active, it falls back to the Twitch stream title/category. When the stream goes offline, the desktop app falls back to the normal song presence.
+
 ## Desktop Development
 
 Run the Electron shell in development mode:
