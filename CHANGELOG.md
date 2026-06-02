@@ -2,6 +2,23 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.6.0 - Local Music Auto DJ
+
+### Added
+- Added Local Music import for MP3, WAV, FLAC, M4A, AAC, OGG, and OPUS files. Imported files are copied into the local app data directory and queued as `local:<id>` tracks so the player never depends on the original file path.
+- Added a Local tab in the player library rail with import, play, queue, refresh, and delete actions for local tracks.
+- Added Auto DJ settings and queue refill support. When enabled, Auto DJ keeps the queue at a target length using Local Music first, then saved songs and play history when available.
+- Added backend API routes for local library listing, file import, local audio streaming with range support, local queueing, deletion, Auto DJ settings, and manual Auto DJ refill.
+- Added regression tests for Local Music import/streaming, Auto DJ refill behavior, and Twitch token refresh paths.
+
+### Changed
+- Local tracks now play through the same player controls, progress bar, volume slider, restart button, loop behavior, desktop playback-state bridge, and queue lifecycle as YouTube tracks.
+- Saved Songs and queue persistence now preserve local-track metadata so a saved local song can be queued and played again.
+- The packaged desktop backend now bundles the new Local Music and Auto DJ modules.
+
+### Fixed
+- Fixed Twitch broadcaster and bot sessions showing as expired when refresh tokens were still available. Status checks, stream status checks, reward sync/list/select calls, chat EventSub subscription, redemption EventSub subscription, and token validation now refresh expired or nearly expired tokens before reporting disconnected or retrying a Twitch request.
+
 ## 0.5.0 - Album Player Redesign
 
 ### Added
