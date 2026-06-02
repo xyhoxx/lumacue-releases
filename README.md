@@ -91,7 +91,7 @@ Example:
 ```json
 {
   "enabled": true,
-  "clientId": "1134559899351793695",
+  "clientId": "1234567890",
   "largeImageKey": "lumacue",
   "largeImageText": "LumaCue"
 }
