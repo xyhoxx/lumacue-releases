@@ -6,7 +6,7 @@ Product release notes for LumaCue desktop builds. Public releases contain built 
 
 ### Added
 - Added optional Discord Rich Presence for the desktop app, showing the current track, artist/requester context, play/pause state, and playback timestamps when configured.
-- Added LumaCue's Discord Application Client ID as the default RPC app, with override support through `LUMACUE_DISCORD_CLIENT_ID` or the desktop `discord-rpc.json` user-data file.
+- Added LumaCue's built-in Discord RPC application as the default presence app, with override support through `LUMACUE_DISCORD_CLIENT_ID` or the desktop `discord-rpc.json` user-data file.
 - Added a richer Discord RPC payload with Listening activity type, per-track artwork as the large image when available, a cleaner title/artist layout, `lumacue` as the small/fallback image asset key, requester context in the small-icon hover text, and clickable YouTube track title details.
 - Added Twitch live-stream override for Discord RPC: when the connected broadcaster channel is live, LumaCue switches its activity type to Streaming with the Twitch channel URL, uses the stream title and thumbnail as the primary card, and shows the current song, artist, requester, and song progress in the playback context line when a song is active.
 
