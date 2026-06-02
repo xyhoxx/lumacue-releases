@@ -65,18 +65,14 @@ Do not change this URL without updating OBS setup documentation and compatibilit
 
 ## Discord Rich Presence
 
-The desktop app supports Discord Rich Presence with LumaCue's Discord Application Client ID:
+The desktop app supports Discord Rich Presence through LumaCue's built-in Discord RPC application.
 
-```text
-1134559899351793695
-```
-
-Discord displays the application name and default icon from Discord Developer Portal. Rename that application to `LumaCue` and set its application icon there if Discord still shows an old bot/app name.
+Discord displays the application name and default icon from Discord Developer Portal. If Discord still shows an old bot/app name, update the built-in Discord application in the Developer Portal before publishing.
 
 Override it for local development with an environment variable:
 
 ```powershell
-$env:LUMACUE_DISCORD_CLIENT_ID = "1134559899351793695"
+$env:LUMACUE_DISCORD_CLIENT_ID = "<your-discord-application-client-id>"
 npm --prefix .\desktop run dev
 ```
 
@@ -91,7 +87,7 @@ Example:
 ```json
 {
   "enabled": true,
-  "clientId": "1234567890",
+  "clientId": "<your-discord-application-client-id>",
   "largeImageKey": "lumacue",
   "largeImageText": "LumaCue"
 }
