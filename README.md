@@ -8,10 +8,21 @@ LumaCue is a local Windows desktop app for Twitch song requests, queue control, 
 - Resolves songs through YouTube Music / YouTube with ranking, fallbacks, and local learned rules.
 - Supports Spotify track links by reading public Spotify embed metadata and resolving the matching playable track.
 - Plays normal YouTube embeds and can fall back to direct audio for embed-blocked videos through yt-dlp.
+- Imports and plays local audio files from the player library rail.
+- Can keep the queue filled automatically with Auto DJ using local music, saved songs, and play history.
 - Provides OBS overlays for now-playing and queue display.
 - Includes a desktop shell with queue drawer, command palette, Twitch setup, About / Updates, and launcher-based updates.
 - Supports Twitch Device Code login for broadcaster and bot accounts without storing a client secret.
+- Refreshes broadcaster and bot access tokens automatically when they expire or are close to expiring.
 - Stores queue, overlay settings, learned rules, and Twitch configuration locally.
+
+## Local Music and Auto DJ
+
+The Player's **Local** tab can import MP3, WAV, FLAC, M4A, AAC, OGG, and OPUS files. Imported files are copied into LumaCue's local data directory and queued as `local:<id>` tracks, so playback does not depend on the original file staying in the same folder.
+
+Local tracks use the same player controls as YouTube tracks: play/pause, skip, restart, loop, volume, progress, queue sync, desktop playback state, and play history.
+
+Auto DJ is controlled from the same Local tab. When enabled, it refills the queue up to the configured target length. It prefers Local Music, then Saved Songs, then previously played history entries when available. Viewer requests are not removed or replaced.
 
 ## Current Release
 
