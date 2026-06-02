@@ -2,6 +2,76 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.5.0 - Album Player Redesign
+
+### Added
+- Added optional Discord Rich Presence for the desktop app, showing the current track, artist/requester context, play/pause state, and playback timestamps when configured.
+- Added LumaCue's Discord Application Client ID as the default RPC app, with override support through `LUMACUE_DISCORD_CLIENT_ID` or the desktop `discord-rpc.json` user-data file.
+- Added a richer Discord RPC payload with Listening activity type, per-track artwork as the large image when available, a cleaner title/artist layout, `lumacue` as the small/fallback image asset key, requester context in the small-icon hover text, and clickable YouTube track title details.
+- Added Twitch live-stream override for Discord RPC: when the connected broadcaster channel is live, LumaCue switches its activity type to Streaming with the Twitch channel URL, uses the stream title and thumbnail as the primary card, and shows the current song, artist, requester, and song progress in the playback context line when a song is active.
+
+### Changed
+- Reworked the desktop shell player into an album-first layout with centered square artwork, track metadata, progress, and controls.
+- Added a cover-art driven blurred backdrop treatment for the player surface while keeping controls readable for stream operation.
+- Simplified desktop shell player controls so playback actions sit under the artwork instead of inside a large utility console card.
+- Updated player metadata copy to show artist and requester details without decorative text glyphs.
+- Refined compact player sizing so the artwork, title, progress, controls, and queue panel fit without horizontal overflow.
+- Changed the desktop player artwork treatment to a circular rotating-disc shape so rotation reads naturally.
+- Added track-change motion for artwork, backdrop, metadata, and controls so the next song does not cut in abruptly.
+- Added a product-wide broadcast media-console visual layer across the desktop shell, command row, queue drawer, native panels, and player queue surfaces.
+- Started the Overlay Settings redesign with an OBS-first embedded layout, neutral media-console controls, and tighter preview/tools placement.
+- Consolidated Overlay Settings CSS so the current embedded media-console layer no longer fights several older visual override passes.
+- Replaced the remaining teal Overlay Settings fallback tokens with the same warm media-console palette used by the final embedded layer.
+- Updated the design/product contracts to move LumaCue toward a premium media-console direction while preserving live-operator density.
+- Removed the remaining outer frame from native desktop panels and tightened Twitch setup into a denser operator layout.
+- Replaced remaining native Electron system notices with a themed LumaCue dialog window for tray About, backend restart, and backend startup failure messages.
+- Softened sidebar navigation hover feedback so it reads as a text-and-icon state instead of a boxed card.
+- Blended the desktop player surface into the surrounding shell by removing the framed player island, softening edge masks, and keeping the library rail as the only strong panel.
+- Restrained the player artwork backdrop so bright covers create a small ambient halo instead of washing the whole player surface into a gray rectangle.
+- Restored a visible cover-art blur wash for the desktop player while keeping it masked into the shell instead of a rectangular backdrop.
+- Recolored the desktop player Library rail toward a warmer dark panel so the queue surface no longer reads as flat gray.
+- Tuned the desktop player backdrop toward a muted full-surface cover blur with grey-green top light and a warm lower fade, matching the intended album-player reference more closely.
+- Reduced the player backdrop blur so artwork shapes remain faintly recognizable, and overscanned the embedded player to hide hard top and bottom seams inside the shell.
+- Added a lighter detail layer to the player backdrop and matched the player body background to the wash so any exposed shell edge blends instead of reading as a separate rectangle.
+- Restored the embedded player frame to fill the shell stage after the overscan attempt collapsed the player into a short strip.
+
+### Fixed
+- Fixed Quick Add suggestions for Thai queries that resolve through the normal resolver fallback instead of the YT Music songs-only index.
+- Added a desktop Quick Add fallback to `/request/resolve` when `/request/suggest` returns no candidates.
+- Replaced remaining question-mark inspect icons with a search/inspect icon in the sidebar and queue drawer.
+- Centered the sidebar inspect icon and matched its sizing more closely to the queue inspect action.
+- Synced the desktop shell queue preview from backend state after Quick Add and whenever the embedded player receives queue updates.
+- Kept the album backdrop synchronized with the active track artwork across initial load and lazy artwork updates.
+- Restored artwork rotation as the visual toggle behavior while keeping the album-derived backdrop visible.
+- Removed the outer desktop player frame so the player surface is not a card nested inside another card.
+- Rebalanced the redesign color system so green is reserved for real online/ready status indicators instead of progress bars, focus states, tabs, and section labels.
+- Replaced remaining question-mark matching copy with inspect-action wording.
+- Fixed the embedded Overlay Settings active tab indicator so it no longer covers the current tab label.
+- Fixed the remaining desktop shell paths that could show OS-native error boxes for backend failures.
+
+## 0.4.0 - Desktop UI Foundation
+
+### Changed
+- Reworked the desktop shell into a quieter control-console layout for live stream operation.
+- Rebalanced the desktop visual layer with restrained ambient texture while reducing heavy blur, glow, shadow, and glass effects.
+- Tightened sidebar navigation, Quick Add, queue preview, native panels, and command palette spacing for faster scanning.
+- Standardized desktop, player, and overlay-settings font stacks around Windows-native UI fonts with Thai fallback.
+- Replaced several text-symbol navigation glyphs with clearer small-size icons, including a local vendored Twitch brand SVG.
+- Replaced shell toolbar, queue action, and reward refresh text glyphs with theme-consistent masked icons.
+- Replaced player control, library, and row-action text glyphs with the same masked-icon approach used by the desktop shell.
+- Reduced repeated UI motion and replaced layout-width progress transitions with transform-based progress fills.
+- Added source-aware shell motion: keyboard-opened command palette and queue drawer respond immediately, while pointer-opened surfaces keep short spatial transitions.
+- Added responsive shell transitions for compact sidebar labels and queue layout changes.
+
+### Fixed
+- Fixed native desktop panels overlapping after switching views by clearing stale animation state and relying on shell transitions.
+- Fixed stale view transition classes for About, Learned Rules, and Play Analytics.
+- Fixed About / Updates, Learned Rules, and Play Analytics layouts that could visually collide during quick navigation.
+
+### Documentation
+- Added product and design contracts for LumaCue's desktop UI direction, including Blocks.so and TheSVG usage rules.
+- Added dependency guidelines for future UI packages so new libraries must be used, packaged offline, and justified by real interaction needs.
+
 ## 0.3.5 - Backend Startup Hotfix
 
 ### Fixed
