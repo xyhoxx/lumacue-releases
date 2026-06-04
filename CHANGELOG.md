@@ -2,6 +2,12 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.6.1 - Discord RPC Crash Hotfix
+
+### Fixed
+- Fixed a main-process crash when Discord Rich Presence hit a broken Discord IPC pipe (`write EPIPE`) on machines where Discord was closed, restarting, or exposing a stale RPC socket.
+- Discord RPC transport failures now disconnect and retry in the background instead of showing Electron's native JavaScript error dialog or stopping LumaCue.
+
 ## 0.6.0 - Local Music Auto DJ
 
 ### Added
