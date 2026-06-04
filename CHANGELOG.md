@@ -2,6 +2,16 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.6.3 - Install Cache Cleanup
+
+### Changed
+- The launcher now runs install-cache cleanup whenever it opens an installed app, including already up-to-date, offline fallback, bootstrap, and freshly updated launches.
+- Update downloads are treated as disposable cache after install, so stale package zips and update manifests are removed automatically.
+
+### Fixed
+- Prevented old version folders, staging folders, and updater download files from accumulating under the local LumaCue install root after multiple updates.
+- Cleanup now preserves the active app version, shared runtime, user data, Twitch tokens, local library data, and unrelated files in the updater download folder.
+
 ## 0.6.2 - Native Discord IPC Adapter
 
 ### Changed
