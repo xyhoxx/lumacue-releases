@@ -2,6 +2,15 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.6.2 - Native Discord IPC Adapter
+
+### Changed
+- Replaced the third-party Discord RPC package with LumaCue's own minimal Discord IPC adapter for Rich Presence.
+- The desktop Discord integration now implements the local IPC handshake, `SET_ACTIVITY`, clear activity, request nonce tracking, reconnect handling, and broken-pipe recovery directly.
+
+### Fixed
+- Hardened Discord Rich Presence against duplicate transport errors and stale IPC socket writes so Discord restarts or closed clients do not surface as Electron main-process crashes.
+
 ## 0.6.1 - Discord RPC Crash Hotfix
 
 ### Fixed
