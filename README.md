@@ -12,7 +12,7 @@ LumaCue is a local Windows desktop app for Twitch song requests, queue control, 
 - Can keep the queue filled automatically with Auto DJ using local music, saved songs, and play history.
 - Provides OBS overlays for now-playing and queue display.
 - Includes a desktop shell with queue drawer, command palette, Twitch setup, About / Updates, and launcher-based updates.
-- Supports Twitch Device Code login for broadcaster and bot accounts without storing a client secret.
+- Supports Twitch Device Code login by default, with an optional Cloudflare Worker OAuth broker for Authorization Code Flow without shipping a client secret in the desktop app.
 - Refreshes broadcaster and bot access tokens automatically when they expire or are close to expiring.
 - Stores queue, overlay settings, learned rules, and Twitch configuration locally.
 
@@ -189,7 +189,9 @@ The manifest keeps a full package fallback for older launchers. New launchers ca
 
 ## Twitch Setup
 
-LumaCue uses Twitch Device Code Flow. No client secret is stored in the app.
+LumaCue uses a Cloudflare Worker OAuth broker by default. No client secret is stored in the desktop app.
+
+For longer-lived Authorization Code Flow sessions, LumaCue uses the Cloudflare Worker broker in `workers/twitch-oauth-broker`. The Worker stores `TWITCH_CLIENT_SECRET` as a Cloudflare secret, exchanges Twitch authorization codes server-side, and returns only short-lived one-time tickets to the local app. The default broker origin is `https://lumacue-twitch-oauth-broker.xyhoxx.workers.dev`; set `LUMACUE_TWITCH_AUTH_BROKER_URL` only when testing another broker deployment.
 
 Required accounts:
 
