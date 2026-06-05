@@ -2,6 +2,13 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.6.4 - Discord Presence Clear Hotfix
+
+### Fixed
+- Discord Rich Presence now clears stale LumaCue activity when the desktop shell starts idle with no current track.
+- LumaCue now waits briefly for Discord activity clear to complete before shutting down the RPC connection during app quit.
+- Reduced confusion in release logs by clarifying that missing local patch bases are downloaded from the previous GitHub release when needed.
+
 ## 0.6.3 - Install Cache Cleanup
 
 ### Changed
