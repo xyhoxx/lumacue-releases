@@ -2,6 +2,11 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.6.7 - Twitch OAuth 1010 Hotfix
+
+### Fixed
+- Fixed Cloudflare `error code: 1010` during Twitch OAuth broker callback by sending a LumaCue User-Agent and JSON Accept header from the backend HTTP client instead of the default Python urllib signature.
+
 ## 0.6.6 - Twitch OAuth Broker
 
 ### Added
