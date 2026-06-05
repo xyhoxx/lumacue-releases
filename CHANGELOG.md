@@ -2,6 +2,18 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.6.6 - Twitch OAuth Broker
+
+### Added
+- Added a Cloudflare Worker Twitch OAuth broker project for Authorization Code Flow with a Worker-side client secret, short-lived one-time tickets, and Durable Object-backed login sessions.
+- Added backend support for broker-based Twitch login and refresh.
+
+### Changed
+- Twitch Connect now uses a unified auth start endpoint so the desktop UI can open either broker login or Device Code login without separate UI paths.
+- Twitch OAuth broker now has a built-in default origin for LumaCue builds instead of requiring every desktop runtime to set `LUMACUE_TWITCH_AUTH_BROKER_URL`.
+- Twitch OAuth now targets the new LumaCue Twitch application used by the Cloudflare broker.
+- Twitch config migration now clears saved accounts and stale device-code flows when the built-in Twitch Client ID changes, forcing a clean reconnect instead of failing broker callback validation.
+
 ## 0.6.5 - Auto DJ and Twitch Session Fixes
 
 ### Added
