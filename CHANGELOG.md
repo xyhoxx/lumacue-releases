@@ -2,6 +2,12 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.6.8 - Twitch OAuth Completion Polish
+
+### Changed
+- Twitch OAuth completion pages now replace the callback query string with a clean local path after handling the ticket, so the browser address bar no longer exposes the OAuth ticket.
+- Restyled the Twitch connected/failed browser pages with centered placement, subtle particles, a cleaner status mark, and LumaCue-themed background treatment.
+
 ## 0.6.7 - Twitch OAuth 1010 Hotfix
 
 ### Fixed
