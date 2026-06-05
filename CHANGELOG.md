@@ -2,6 +2,22 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.6.5 - Auto DJ and Twitch Session Fixes
+
+### Added
+- Local Music imports now optimize non-OPUS audio to OPUS when possible, reducing stored file size while preserving stream-ready audio quality.
+- Packaged desktop builds now include a bundled ffmpeg binary for Local Music optimization, with fallback to the original file when optimization is unavailable.
+
+### Changed
+- Auto DJ now uses saved songs and play history only. Local Music remains manually importable/playable, but it no longer auto-fills the queue.
+- The Local tab Auto DJ control now uses a compact switch treatment, and crowded library tabs can scroll horizontally instead of squeezing text.
+
+### Fixed
+- Fixed legacy Auto DJ settings that still listed Local Music as a source causing local tracks to be queued automatically.
+- Fixed Twitch broadcaster/bot expired-session status so invalid refresh tokens are reported as reconnect-required instead of looping silently.
+- Reduced repeated Twitch refresh attempts after a refresh token failure by adding a short retry backoff.
+- Fixed Overlay Settings sliders rendering as doubled tracks in the embedded desktop view.
+
 ## 0.6.4 - Discord Presence Clear Hotfix
 
 ### Fixed
