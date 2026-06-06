@@ -2,6 +2,27 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.7.0 - Request Safety, Auto DJ, and Desktop Polish
+
+### Added
+- Added a global Blocklist view for artists, keywords, and video IDs. Blocklist rules apply across manual requests, Twitch redemptions, direct queue adds, Local Music, saved songs, playlists, and Auto DJ.
+- Added clear Blocklist feedback when a requested track is rejected, including the blocked track title and the matching rule such as artist, keyword, or video ID.
+- Added Auto DJ discovery so queue refills can use related YouTube Music candidates instead of only replaying saved songs or play history.
+- Added Local Music bulk actions for playing or queuing all local tracks and clearing the local library.
+- Added server-managed Twitch bot support for `xyhoxx_bot`, removing the desktop bot-login path to prevent signing in with the wrong bot account.
+
+### Changed
+- Refined the desktop shell with a dedicated Blocklist navigation item, quieter particle background treatment, cleaner themed dropdowns, and less crowded Library controls.
+- Updated Overlay Settings sliders to use a custom progress style that matches the LumaCue theme.
+- Local Music imports now preserve Thai filename marks and fall back to the LumaCue icon when no track artwork is available.
+- Discord Rich Presence now shows paused and buffering states without continuing stale song progress timestamps.
+
+### Fixed
+- Fixed desktop Quick Add showing blocked songs as if they were added.
+- Fixed Local Music, saved songs, playlists, and manual requests showing generic Blocklist errors instead of explaining which global rule blocked the track.
+- Fixed server-side Twitch bot validation so saved bot credentials must belong to `xyhoxx_bot`.
+- Ignored local runtime state files so Auto DJ and Local Music data from the developer machine are not committed into releases.
+
 ## 0.6.8 - Twitch OAuth Completion Polish
 
 ### Changed
