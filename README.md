@@ -9,7 +9,8 @@ LumaCue is a local Windows desktop app for Twitch song requests, queue control, 
 - Supports Spotify track links by reading public Spotify embed metadata and resolving the matching playable track.
 - Plays normal YouTube embeds and can fall back to direct audio for embed-blocked videos through yt-dlp.
 - Imports and plays local audio files from the player library rail.
-- Can keep the queue filled automatically with Auto DJ using local music, saved songs, and play history.
+- Can keep the queue filled automatically with Auto DJ using related YouTube Music discovery, saved songs, and play history.
+- Provides a global Blocklist for blocked artists, keywords, and video IDs across manual requests, Twitch redemptions, Local Music, saved songs, playlists, and Auto DJ.
 - Provides OBS overlays for now-playing and queue display.
 - Includes a desktop shell with queue drawer, command palette, Twitch setup, About / Updates, and launcher-based updates.
 - Supports Twitch Device Code login by default, with an optional Cloudflare Worker OAuth broker for Authorization Code Flow without shipping a client secret in the desktop app.
@@ -22,7 +23,9 @@ The Player's **Local** tab can import MP3, WAV, FLAC, M4A, AAC, OGG, and OPUS fi
 
 Local tracks use the same player controls as YouTube tracks: play/pause, skip, restart, loop, volume, progress, queue sync, desktop playback state, and play history.
 
-Auto DJ is controlled from the same Local tab. When enabled, it refills the queue up to the configured target length. It prefers Local Music, then Saved Songs, then previously played history entries when available. Viewer requests are not removed or replaced.
+Auto DJ can refill the queue up to the configured target length. It prefers related YouTube Music discovery, then Saved Songs, then previously played history entries when available. Local Music remains manually importable and playable, but it is not used as an automatic refill source. Viewer requests are not removed or replaced.
+
+The global Blocklist applies to Local Music too. If a local track matches a blocked artist, keyword, or video ID, LumaCue rejects the queue action and shows the matching Blocklist rule.
 
 ## Current Release
 
