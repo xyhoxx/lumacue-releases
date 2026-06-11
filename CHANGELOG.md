@@ -2,6 +2,12 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.7.1 - Auto DJ Replay Hotfix
+
+### Fixed
+- Auto DJ now skips recently played YouTube tracks during refill candidate selection, including related YouTube Music discovery results and direct play-history fallback, so it is less likely to requeue songs that just played.
+- The desktop launcher now waits for install-cache cleanup before handing off to the app, so old `%LOCALAPPDATA%\LumaCue\apps` versions and downloaded update ZIPs are pruned reliably instead of being left behind.
+
 ## 0.7.0 - Request Safety, Auto DJ, and Desktop Polish
 
 ### Added
