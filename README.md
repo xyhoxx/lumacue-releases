@@ -23,7 +23,7 @@ The Player's **Local** tab can import MP3, WAV, FLAC, M4A, AAC, OGG, and OPUS fi
 
 Local tracks use the same player controls as YouTube tracks: play/pause, skip, restart, loop, volume, progress, queue sync, desktop playback state, and play history.
 
-Auto DJ can refill the queue up to the configured target length. It prefers related YouTube Music discovery, then Saved Songs, then previously played history entries when available. Local Music remains manually importable and playable, but it is not used as an automatic refill source. Viewer requests are not removed or replaced.
+Auto DJ can refill the queue up to the configured target length. It prefers related YouTube Music discovery, then Saved Songs, then older play history entries when available. Recently played songs are skipped by default so Auto DJ does not immediately replay tracks that just left the player. Local Music remains manually importable and playable, but it is not used as an automatic refill source. Viewer requests are not removed or replaced.
 
 The global Blocklist applies to Local Music too. If a local track matches a blocked artist, keyword, or video ID, LumaCue rejects the queue action and shows the matching Blocklist rule.
 
