@@ -2,6 +2,11 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.7.2 - Install Cache Cleanup Hotfix
+
+### Fixed
+- Made install-cache cleanup resilient when Windows temporarily locks the previous app folder during launcher handoff. Cleanup now continues to prune staging and downloaded update ZIPs, and the launched app retries cleanup shortly after opening.
+
 ## 0.7.1 - Auto DJ Replay Hotfix
 
 ### Fixed
