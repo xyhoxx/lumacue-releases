@@ -2,6 +2,17 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.7.4 - Icon Refresh Hotfix
+
+### Changed
+- The launcher and desktop app now refresh LumaCue Desktop and Start Menu shortcut icons on startup using a versioned icon cache under `%LOCALAPPDATA%\LumaCue\icons`, so installed users can receive the new icon through an update instead of reinstalling.
+- The launcher now sets the LumaCue Windows AppUserModelID so update/install windows group more consistently with the app shortcut.
+
+### Fixed
+- Updated the online installer card to use the new circular LumaCue mark instead of the old cream play badge.
+- Updated installer-created shortcuts to include an explicit `IconLocation` and working directory.
+- Updated the player start overlay play button to match the new dark circular LumaCue mark.
+
 ## 0.7.3 - Branding and Dev State Cleanup
 
 ### Changed
