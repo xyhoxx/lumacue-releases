@@ -219,6 +219,8 @@ Channel Points custom rewards require the broadcaster channel to have Twitch Aff
 
 Local state is intentionally not committed.
 
+Local development now defaults `TWITCH_SONGS_DATA_DIR` to `%APPDATA%\LumaCue\backend-state-dev` so runtime state and imported Local Music files do not clutter the repo root. Set `TWITCH_SONGS_DATA_DIR` yourself if you want another location.
+
 Common state files:
 
 - `queue_state.json`
