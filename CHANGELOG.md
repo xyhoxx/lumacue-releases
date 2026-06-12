@@ -2,6 +2,17 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.7.5 - CI Release and Auto DJ Hotfix
+
+### Changed
+- Release tagging now uses the CI/CD release path by default. `npm --prefix desktop run release` pushes the version tag for GitHub Actions instead of locally publishing release assets.
+- The desktop rail now clips the now-playing marquee without the dark fade overlay that looked like a black shadow over long song titles.
+- The online installer now renders the same bitmap LumaCue app mark used elsewhere instead of a hand-drawn setup badge.
+
+### Fixed
+- Auto DJ can now seed the first queue item from YouTube Music discovery when the app starts with no current song, no queue, and no saved/history seed yet.
+- The Auto DJ toggle now reports when enabling it immediately queued tracks.
+
 ## 0.7.4 - Icon Refresh Hotfix
 
 ### Changed
