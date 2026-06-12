@@ -140,16 +140,18 @@ Build the installer and update packages:
 npm --prefix .\desktop run build:release
 ```
 
-Publish built release artifacts:
-
-```powershell
-npm --prefix .\desktop run publish:github
-```
-
-Full release pipeline:
+Trigger the CI/CD release:
 
 ```powershell
 npm --prefix .\desktop run release
+```
+
+`publish:github` is reserved for the GitHub Actions runner and refuses local use by default.
+
+Run local release builds for verification only:
+
+```powershell
+npm --prefix .\desktop run build:release
 ```
 
 ## CI/CD Release Flow
