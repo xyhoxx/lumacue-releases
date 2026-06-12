@@ -2,6 +2,16 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.7.3 - Branding and Dev State Cleanup
+
+### Changed
+- Updated LumaCue branding surfaces to use the new circular app icon across the desktop shell, startup screen, launcher screen, tray icon, and packaged launcher assets.
+- Local desktop development now stores backend runtime state under `%APPDATA%\LumaCue\backend-state-dev` by default, keeping imported Local Music files and runtime state out of the source checkout.
+
+### Fixed
+- Added the new PNG icon to the launcher package so startup and launcher windows can render the same app mark as the desktop shell.
+- Ignored the local `local_music/` runtime folder so developer-imported audio files are not accidentally committed.
+
 ## 0.7.2 - Install Cache Cleanup Hotfix
 
 ### Fixed
