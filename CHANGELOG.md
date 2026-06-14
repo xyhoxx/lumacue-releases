@@ -2,6 +2,16 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.7.6 - Player Shell Transition Hotfix
+
+### Changed
+- Player artwork now fades more smoothly when switching from the Player view to other desktop tabs, reducing the abrupt jump from cover-art atmosphere to a dark panel.
+- The Library tab row now fills the right panel cleanly, removing the false gutter line that looked like leftover space from the expanding sidebar.
+
+### Fixed
+- Fixed the desktop shell briefly losing the shared artwork backdrop during view changes.
+- Fixed the Library tab strip leaving a clipped right-side gap in the desktop player panel.
+
 ## 0.7.5 - CI Release and Auto DJ Hotfix
 
 ### Changed
