@@ -2,6 +2,18 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.7.7 - Interaction and Reliability Polish
+
+### Changed
+- Library tabs now use a shared animated underline that follows hover and selection without stacking separate tab pills. Adjacent tabs connect as one continuous line while distant tabs remain distinct.
+- Unified the liquid toggle treatment across Auto DJ, Overlay Settings, and Twitch refund controls for consistent keyboard, focus, and motion behavior.
+- Cover-art glow and pulse effects now hand off smoothly while a new artwork palette is loading.
+
+### Fixed
+- Fixed a visible one-pixel seam between adjacent active and hovered Library tab underlines.
+- Fixed Discord Rich Presence updates falling behind or reporting transient errors when tracks change quickly.
+- Fixed compact Library alignment issues in tab labels, badges, and the Auto DJ control row.
+
 ## 0.7.6 - Player Shell Transition Hotfix
 
 ### Changed
