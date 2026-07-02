@@ -6,7 +6,7 @@ LumaCue is a local Windows desktop app for Twitch song requests, queue control, 
 
 - Accepts song requests from the desktop Quick Add panel, web player, Streamer.bot, and Twitch Channel Points.
 - Resolves songs through YouTube Music / YouTube with ranking, fallbacks, and local learned rules.
-- Supports Spotify track links by reading public Spotify embed metadata and resolving the matching playable track.
+- Supports Spotify track links and Spotify playlist imports by reading public Spotify embed metadata and resolving matching playable YouTube Music / YouTube tracks.
 - Plays normal YouTube embeds and can fall back to direct audio for embed-blocked videos through yt-dlp.
 - Imports and plays local audio files from the player library rail.
 - Can keep the queue filled automatically with Auto DJ using related YouTube Music discovery, saved songs, and play history.
