@@ -2,6 +2,16 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.7.8 - Overlay Album Motion Polish
+
+### Changed
+- Overlay Album Motion now works with compact player overlays, including pill-shaped layouts, instead of only full or blur-cover overlay modes.
+- Compact overlays now keep the animated artwork atmosphere visible through a lighter glass player card while preserving readable text and progress controls.
+
+### Fixed
+- Fixed compact/pill overlays showing Album Motion as a rectangular sheet behind the player card.
+- Fixed overlay foreground glass using the same opacity for the player card and queue panel, which made compact motion either too hidden or too heavy.
+
 ## 0.7.7 - Interaction and Reliability Polish
 
 ### Changed
