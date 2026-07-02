@@ -2,6 +2,14 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.7.9 - Spotify Playlist Imports
+
+### Added
+- Added Spotify playlist import support to the existing Playlist tab. Spotify playlist links are read through public Spotify embed metadata, converted into title/artist queries, and resolved through the existing YouTube Music / YouTube song resolver.
+
+### Changed
+- Updated Playlist tab copy so the existing playlist input clearly accepts both YouTube and Spotify playlist links.
+
 ## 0.7.8 - Overlay Album Motion Polish
 
 ### Changed
