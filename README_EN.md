@@ -79,7 +79,7 @@ The dynamic analysis reports `0` detections and `0` suspicious activities. Its s
 
 ![Kaspersky OpenTIP dynamic analysis for LumaCue v0.8.0](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.0-dynamic-analysis.png)
 
-[VirusTotal reports `0/69` security vendors](https://www.virustotal.com/gui/file/2a17e9ea05fd27ce2d2d7b9ae1905deb0f2c47cede89a170ce7c90ce5bf9a23a/detection) flagging the same file hash as malicious at the time of the scan.
+VirusTotal scanned the same file hash with 69 security vendors, and **none flagged it as malicious (`0/69`)** at the time of the scan ([view the scan result](https://www.virustotal.com/gui/file/2a17e9ea05fd27ce2d2d7b9ae1905deb0f2c47cede89a170ce7c90ce5bf9a23a/detection)).
 
 ![VirusTotal detection result for LumaCue v0.8.0](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.0-detection.png)
 
