@@ -69,6 +69,18 @@ Use `LumaCue-Setup-Offline-<version>.exe` when you want to save the full install
 - Twitch tokens are stored locally and protected with Windows DPAPI.
 - The desktop app does not contain the Twitch client secret. The authorization service keeps that secret server-side.
 
+### Security Verification
+
+LumaCue `v0.8.0` is classified as **Clean** by [Kaspersky OpenTIP](https://opentip.kaspersky.com/2A17E9EA05FD27CE2D2D7B9AE1905DEB0F2C47CEDE89A170CE7C90CE5BF9A23A/results?tab) for the following `LumaCue.exe` SHA-256:
+
+`2A17E9EA05FD27CE2D2D7B9AE1905DEB0F2C47CEDE89A170CE7C90CE5BF9A23A`
+
+The dynamic analysis reports `0` detections and `0` suspicious activities. Its single network activity is categorized as `Good`, not as a threat detection.
+
+![Kaspersky OpenTIP dynamic analysis for LumaCue v0.8.0](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.0-dynamic-analysis.png)
+
+This result applies only to the file and hash above. Always download installers from the official release page.
+
 ## Troubleshooting
 
 - **Which file should I download?** Use `LumaCue-Setup-Online.exe` when you have internet access. Use `LumaCue-Setup-Offline-<version>.exe` for an offline installation.
