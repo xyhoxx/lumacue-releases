@@ -23,6 +23,25 @@ Product release notes for LumaCue desktop builds. Public releases contain built 
 ### Removed
 - Removed the Album Motion system from the Player and OBS overlay paths because the generated artwork motion did not fit the product direction. Existing static artwork backdrop, cover spin, pulse, glow, and other overlay effects remain available.
 
+<details>
+<summary>ภาษาไทย</summary>
+
+### เพิ่ม
+- เพิ่มปุ่ม Reconnect สำหรับ Broadcaster เพื่อเริ่มยืนยัน Twitch ใหม่โดยไม่ล้าง reward, EventSub หรือการตั้งค่า fixed bot
+- เพิ่มสิทธิ์ `user:read:chat` ให้ Broadcaster เพื่อรองรับการตอบเลือกศิลปินจากแชต เมื่อใช้ `xyhoxx_bot` แบบ server-side
+- เพิ่มสวิตช์เปิด/ปิด Channel Points redemption โดยไม่กระทบ reward ที่เลือกไว้หรือ listener
+
+### เปลี่ยนแปลง
+- ทำให้การทำความสะอาดคำขอจาก Twitch เหมือนกับการค้นหาจากโปรแกรม: normalize Unicode, ลบอักขระซ่อน, ตัด trigger ที่รองรับ และรวมช่องว่าง
+- เปิดให้ใช้ภาษาอังกฤษเป็นภาษาสำหรับ release ปัจจุบัน ส่วนตัวเลือกภาษาไทยยังแสดงอยู่เพื่อเตรียมการรองรับ UI responsive ในรอบถัดไป
+
+### แก้ไข
+- แก้ flow เลือกเพลง `1/2/3` จาก Twitch ที่ก่อนหน้านี้ถามผู้ชมได้แต่รับคำตอบไม่ได้เมื่อใช้ fixed server-side bot
+- แก้คำค้นจาก redemption ที่ตีความต่างจากคำค้นใน desktop ก่อนเข้า resolver
+- ลบหัวข้อ `Request Song reward` ที่ซ้ำซ้อนออกจาก Channel Points card
+- นำ Album Motion ออกจาก Player และ OBS overlay เพราะยังไม่เหมาะกับทิศทางผลิตภัณฑ์
+</details>
+
 ## 0.7.9 - Spotify Playlist Imports
 
 ### Added
