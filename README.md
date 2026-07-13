@@ -79,7 +79,7 @@ LumaCue `v0.8.0` ได้รับผล **Clean** จาก [Kaspersky OpenTIP
 
 ![ผลการวิเคราะห์ Kaspersky OpenTIP ของ LumaCue v0.8.0](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.0-dynamic-analysis.png)
 
-VirusTotal รายงาน [`0/69` security vendors](https://www.virustotal.com/gui/file/2a17e9ea05fd27ce2d2d7b9ae1905deb0f2c47cede89a170ce7c90ce5bf9a23a/detection) ตรวจพบไฟล์ hash เดียวกันว่าเป็นอันตราย ณ เวลาที่สแกน
+VirusTotal สแกนไฟล์ hash เดียวกันด้วยเอนจินความปลอดภัย 69 ราย และ **ไม่มีรายใดตรวจพบว่าเป็นอันตราย (`0/69`)** ณ เวลาที่สแกน ([ดูผลสแกน](https://www.virustotal.com/gui/file/2a17e9ea05fd27ce2d2d7b9ae1905deb0f2c47cede89a170ce7c90ce5bf9a23a/detection))
 
 ![ผลการตรวจ VirusTotal ของ LumaCue v0.8.0](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.0-detection.png)
 
