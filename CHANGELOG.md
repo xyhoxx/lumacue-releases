@@ -4,6 +4,12 @@
 
 **ภาษา:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.2 - Hotfix: ปรับหน้าตา native launcher
+
+### แก้ไข
+- ปรับหน้าต่าง native launcher ให้ใช้ดีไซน์ของ LumaCue แทนหน้าต่าง Windows มาตรฐาน: การ์ดมุมโค้ง, แบรนด์, สถานะ, progress bar สีครีม และ footer ที่อ่านง่าย
+- ตัด title bar สีขาวของ Windows และ progress bar สีเขียวมาตรฐานที่หลุดจากธีม
+
 ## 0.8.1 - Hotfix: Auto DJ และ native launcher
 
 ### แก้ไข
