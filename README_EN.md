@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  <a href="README.md"><strong>EN</strong></a>
+  <a href="README.md">TH</a>
   &nbsp;|&nbsp;
-  <a href="README_TH.md">TH</a>
+  <a href="README_EN.md"><strong>EN</strong></a>
   &nbsp;|&nbsp;
   <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest">Download for Windows</a>
   &nbsp;|&nbsp;
@@ -20,23 +20,26 @@
 
 ## Download
 
-**Recommended for most users**
+**Recommended for most users: Online Setup**
 
 1. Open the [latest release](https://github.com/xyhoxx/lumacue-releases/releases/latest).
-2. Under **Assets**, download `LumaCue-Setup-Offline-<version>.exe`.
+2. Under **Assets**, download `LumaCue-Setup-Online.exe`.
 3. Run the installer, then open LumaCue from Start Menu or the desktop shortcut.
 
-`LumaCue-Setup-Offline-<version>.exe` includes the app and everything it needs to run. You do **not** need to download ZIP, patch, runtime, `latest.yml`, or manifest files manually.
+`LumaCue-Setup-Online.exe` is the smallest and quickest installer. It downloads the current app during setup, so an internet connection is required.
+
+Use `LumaCue-Setup-Offline-<version>.exe` when you want to save the full installer for a PC that will be offline during installation.
 
 | File | Use it when... | Intended for |
 | --- | --- | --- |
-| `LumaCue-Setup-Offline-<version>.exe` | You are installing LumaCue normally. | Normal installation and first-time setup |
+| `LumaCue-Setup-Online.exe` | You have internet access and want the fastest, smallest installer. | Recommended for most users |
+| `LumaCue-Setup-Offline-<version>.exe` | The PC will be offline during installation, or you want to keep a full installer. | Offline or reusable installation |
 | `LumaCue-win-x64-<version>.zip` | You specifically need the full portable package. | Advanced users only |
 | `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | Never for a normal manual install. | Managed automatically by the updater |
 
 ## Quick Start
 
-1. **Install LumaCue** using the offline installer.
+1. **Install LumaCue** using the online installer, or the offline installer when needed.
 2. Open **Twitch** in LumaCue and connect your **Broadcaster** account. Use **Reconnect** whenever LumaCue asks for newly required Twitch permissions.
 3. Create or select the Channel Points reward, then start listening.
 4. In OBS, add a **Browser Source** using:
@@ -56,7 +59,7 @@
 ## Requirements
 
 - Windows 10 or newer
-- Internet connection for installation, updates, and online music resolution
+- Internet connection for Online Setup, updates, and online music resolution
 - OBS Browser Source for overlays
 - Twitch Affiliate or Partner status for Channel Points Custom Rewards
 
@@ -68,7 +71,7 @@
 
 ## Troubleshooting
 
-- **Which file should I download?** Use `LumaCue-Setup-Offline-<version>.exe`.
+- **Which file should I download?** Use `LumaCue-Setup-Online.exe` when you have internet access. Use `LumaCue-Setup-Offline-<version>.exe` for an offline installation.
 - **Twitch asks to reconnect?** Use the Broadcaster **Reconnect** button. It refreshes authorization without clearing your reward or listener setup.
 - **Channel Points reward cannot be created?** Twitch requires Affiliate or Partner status.
 - **OBS overlay is blank?** Confirm LumaCue is running and use `http://127.0.0.1:5000/overlay-player.html`.
