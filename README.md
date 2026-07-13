@@ -5,21 +5,22 @@
 </p>
 
 <p align="center">
-  <strong>Twitch song requests, queue control, Auto DJ, and OBS music overlays for Windows streamers.</strong><br>
-  ระบบรับขอเพลงสำหรับ Twitch, จัดการคิว, Auto DJ และ OBS music overlay สำหรับสตรีมเมอร์บน Windows
+  <strong>Twitch song requests, queue control, Auto DJ, and OBS music overlays for Windows streamers.</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest"><strong>Download for Windows / ดาวน์โหลดสำหรับ Windows</strong></a>
+  <a href="README.md"><strong>EN</strong></a>
   &nbsp;|&nbsp;
-  <a href="CHANGELOG.md">Changelog (EN)</a>
+  <a href="README_TH.md">TH</a>
   &nbsp;|&nbsp;
-  <a href="CHANGELOG_TH.md">บันทึกการเปลี่ยนแปลง (TH)</a>
+  <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest">Download for Windows</a>
+  &nbsp;|&nbsp;
+  <a href="CHANGELOG.md">Changelog</a>
 </p>
 
-## Download / ดาวน์โหลด
+## Download
 
-**Recommended for most users / แนะนำสำหรับผู้ใช้ทั่วไป**
+**Recommended for most users**
 
 1. Open the [latest release](https://github.com/xyhoxx/lumacue-releases/releases/latest).
 2. Under **Assets**, download `LumaCue-Setup-Offline-<version>.exe`.
@@ -27,18 +28,16 @@
 
 `LumaCue-Setup-Offline-<version>.exe` includes the app and runtime. You do **not** need to download ZIP, patch, runtime, `latest.yml`, or manifest files manually.
 
-ดาวน์โหลด `LumaCue-Setup-Offline-<version>.exe` จากหน้า release ล่าสุดแล้วติดตั้งได้ทันที ไฟล์ ZIP, patch, runtime, `latest.yml` และ manifest เป็นไฟล์สำหรับระบบอัปเดต ไม่จำเป็นต้องโหลดเอง
-
-| File | Use it when... | สำหรับ... |
+| File | Use it when... | Intended for |
 | --- | --- | --- |
-| `LumaCue-Setup-Offline-<version>.exe` | You are installing LumaCue normally. | ผู้ใช้ทั่วไปและการติดตั้งครั้งแรก |
-| `LumaCue-win-x64-<version>.zip` | You specifically need the full portable package. | ผู้ใช้ขั้นสูงเท่านั้น |
-| `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | Never for a normal manual install. | ให้ updater จัดการอัตโนมัติ |
+| `LumaCue-Setup-Offline-<version>.exe` | You are installing LumaCue normally. | Normal installation and first-time setup |
+| `LumaCue-win-x64-<version>.zip` | You specifically need the full portable package. | Advanced users only |
+| `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | Never for a normal manual install. | Managed automatically by the updater |
 
-## Quick Start / เริ่มต้นใช้งาน
+## Quick Start
 
 1. **Install LumaCue** using the offline installer.
-2. Open **Twitch** in LumaCue and connect your **Broadcaster** account. Connect it again with **Reconnect** whenever LumaCue asks for newly required Twitch permissions.
+2. Open **Twitch** in LumaCue and connect your **Broadcaster** account. Use **Reconnect** whenever LumaCue asks for newly required Twitch permissions.
 3. Create or select the Channel Points reward, then start listening.
 4. In OBS, add a **Browser Source** using:
 
@@ -46,12 +45,7 @@
    http://127.0.0.1:5000/overlay-player.html
    ```
 
-1. **ติดตั้ง LumaCue** ด้วย offline installer
-2. เปิดหน้า **Twitch** แล้วเชื่อมต่อบัญชี **Broadcaster** หากโปรแกรมแจ้งว่าต้องขอสิทธิ์ Twitch เพิ่ม ให้กด **Reconnect** แทนการ Logout
-3. สร้างหรือเลือก Channel Points reward แล้วเริ่ม listener
-4. เพิ่ม OBS **Browser Source** ด้วย URL ด้านบน
-
-## Why LumaCue? / ทำอะไรได้บ้าง
+## Why LumaCue?
 
 - Let viewers request songs through Twitch Channel Points.
 - Keep requests manageable with queue controls, global Blocklist, learned rules, and Auto DJ.
@@ -59,39 +53,25 @@
 - Add YouTube, YouTube Music, Spotify track or playlist links, and local audio files.
 - Run locally on your Windows PC with a desktop control surface and Discord Rich Presence.
 
-- ให้ผู้ชมขอเพลงผ่าน Twitch Channel Points
-- คุมคิวด้วย queue controls, Global Blocklist, learned rules และ Auto DJ
-- แสดง Now Playing และคิวบน OBS ผ่าน Browser Source URL ที่คงที่
-- เพิ่มเพลงจาก YouTube, YouTube Music, Spotify track/playlist และไฟล์เพลงในเครื่อง
-- ทำงานบน Windows ในเครื่อง พร้อม Discord Rich Presence
+## Requirements
 
-## Requirements / สิ่งที่ต้องมี
+- Windows 10 or newer
+- Internet connection for installation, updates, and online music resolution
+- OBS Browser Source for overlays
+- Twitch Affiliate or Partner status for Channel Points Custom Rewards
 
-- Windows 10 or newer / Windows 10 ขึ้นไป
-- Internet connection for install, updates, and online music resolution / อินเทอร์เน็ตสำหรับติดตั้ง อัปเดต และค้นหาเพลงออนไลน์
-- OBS Browser Source for overlays / OBS Browser Source สำหรับ overlay
-- Twitch Affiliate or Partner status for Channel Points Custom Rewards / Twitch Affiliate หรือ Partner หากต้องการใช้ Channel Points
-
-## Privacy and Security / ความเป็นส่วนตัวและความปลอดภัย
+## Privacy and Security
 
 - LumaCue runs its playback queue, settings, local music library, and overlay service on your PC.
 - Twitch tokens are stored locally and protected with Windows DPAPI.
 - The desktop app does not contain the Twitch client secret. Authorization Code Flow uses a Cloudflare Worker broker that keeps the secret server-side.
 
-- คิวเพลง, การตั้งค่า, Local Music และบริการ overlay ทำงานบนเครื่องของคุณ
-- Twitch token ถูกเก็บในเครื่องและป้องกันด้วย Windows DPAPI
-- โปรแกรมเดสก์ท็อปไม่มี Twitch client secret; OAuth broker บน Cloudflare Worker เก็บ secret ฝั่งเซิร์ฟเวอร์
-
-## Troubleshooting / แก้ปัญหาเบื้องต้น
+## Troubleshooting
 
 - **Which file should I download?** Use `LumaCue-Setup-Offline-<version>.exe`.
 - **Twitch asks to reconnect?** Use the Broadcaster **Reconnect** button. It refreshes authorization without clearing your reward or listener setup.
 - **Channel Points reward cannot be created?** Twitch requires Affiliate or Partner status.
 - **OBS overlay is blank?** Confirm LumaCue is running and use `http://127.0.0.1:5000/overlay-player.html`.
-- **เลือกไฟล์ไหน?** ใช้ `LumaCue-Setup-Offline-<version>.exe`
-- **Twitch ให้เชื่อมใหม่?** กด **Reconnect** ฝั่ง Broadcaster เพื่อขอสิทธิ์ใหม่โดยไม่ล้าง reward หรือ listener
-- **สร้าง Channel Points ไม่ได้?** ช่องต้องเป็น Twitch Affiliate หรือ Partner
-- **OBS overlay ว่าง?** ตรวจว่า LumaCue เปิดอยู่ และใช้ URL ที่ระบุด้านบน
 
 ## For Developers and Maintainers
 
