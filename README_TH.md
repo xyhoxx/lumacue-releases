@@ -64,7 +64,7 @@
 
 - คิวเพลง, การตั้งค่า, Local Music และบริการ overlay ทำงานบนเครื่องของคุณ
 - Twitch token ถูกเก็บในเครื่องและป้องกันด้วย Windows DPAPI
-- โปรแกรมเดสก์ท็อปไม่มี Twitch client secret; การเชื่อมต่อ Twitch ใช้ Cloudflare Worker เก็บ secret ฝั่งเซิร์ฟเวอร์
+- โปรแกรมเดสก์ท็อปไม่มี Twitch client secret; ระบบเชื่อมต่อเก็บ secret ไว้ฝั่งเซิร์ฟเวอร์
 
 ## แก้ปัญหาเบื้องต้น
 
