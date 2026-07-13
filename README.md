@@ -5,76 +5,76 @@
 </p>
 
 <p align="center">
-  <strong>Twitch song requests, queue control, Auto DJ, and OBS music overlays for Windows streamers.</strong>
+  <strong>ระบบรับขอเพลงสำหรับ Twitch, จัดการคิว, Auto DJ และ OBS music overlay สำหรับสตรีมเมอร์บน Windows</strong>
 </p>
 
 <p align="center">
-  <a href="README.md"><strong>EN</strong></a>
+  <a href="README.md">EN</a>
   &nbsp;|&nbsp;
-  <a href="README_TH.md">TH</a>
+  <a href="README_TH.md"><strong>TH</strong></a>
   &nbsp;|&nbsp;
-  <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest">Download for Windows</a>
+  <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest">ดาวน์โหลดสำหรับ Windows</a>
   &nbsp;|&nbsp;
-  <a href="CHANGELOG.md">Changelog</a>
+  <a href="CHANGELOG_TH.md">บันทึกการเปลี่ยนแปลง</a>
 </p>
 
-## Download
+## ดาวน์โหลด
 
-**Recommended for most users**
+**แนะนำสำหรับผู้ใช้ทั่วไป**
 
-1. Open the [latest release](https://github.com/xyhoxx/lumacue-releases/releases/latest).
-2. Under **Assets**, download `LumaCue-Setup-Offline-<version>.exe`.
-3. Run the installer, then open LumaCue from Start Menu or the desktop shortcut.
+1. เปิดหน้า [release ล่าสุด](https://github.com/xyhoxx/lumacue-releases/releases/latest)
+2. ที่ส่วน **Assets** ดาวน์โหลด `LumaCue-Setup-Offline-<version>.exe`
+3. รันตัวติดตั้ง แล้วเปิด LumaCue จาก Start Menu หรือ desktop shortcut
 
-`LumaCue-Setup-Offline-<version>.exe` includes the app and everything it needs to run. You do **not** need to download ZIP, patch, runtime, `latest.yml`, or manifest files manually.
+`LumaCue-Setup-Offline-<version>.exe` มีทั้งโปรแกรมและไฟล์ที่จำเป็นต่อการทำงานอยู่แล้ว ไม่ต้องโหลด ZIP, patch, runtime, `latest.yml` หรือ manifest ด้วยตัวเอง
 
-| File | Use it when... | Intended for |
+| ไฟล์ | ใช้เมื่อ... | สำหรับ... |
 | --- | --- | --- |
-| `LumaCue-Setup-Offline-<version>.exe` | You are installing LumaCue normally. | Normal installation and first-time setup |
-| `LumaCue-win-x64-<version>.zip` | You specifically need the full portable package. | Advanced users only |
-| `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | Never for a normal manual install. | Managed automatically by the updater |
+| `LumaCue-Setup-Offline-<version>.exe` | ต้องการติดตั้ง LumaCue ตามปกติ | ผู้ใช้ทั่วไปและการติดตั้งครั้งแรก |
+| `LumaCue-win-x64-<version>.zip` | ต้องการ full portable package โดยเฉพาะ | ผู้ใช้ขั้นสูงเท่านั้น |
+| `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | ไม่ต้องใช้สำหรับการติดตั้งปกติ | โปรแกรมอัปเดตจัดการให้อัตโนมัติ |
 
-## Quick Start
+## เริ่มต้นใช้งาน
 
-1. **Install LumaCue** using the offline installer.
-2. Open **Twitch** in LumaCue and connect your **Broadcaster** account. Use **Reconnect** whenever LumaCue asks for newly required Twitch permissions.
-3. Create or select the Channel Points reward, then start listening.
-4. In OBS, add a **Browser Source** using:
+1. **ติดตั้ง LumaCue** ด้วย offline installer
+2. เปิดหน้า **Twitch** ใน LumaCue แล้วเชื่อมต่อบัญชี **Broadcaster** หากโปรแกรมต้องขอสิทธิ์ Twitch เพิ่ม ให้กด **Reconnect**
+3. สร้างหรือเลือก Channel Points reward แล้วเริ่มรับคำขอเพลง
+4. เพิ่ม OBS **Browser Source** ด้วย URL นี้
 
    ```text
    http://127.0.0.1:5000/overlay-player.html
    ```
 
-## Why LumaCue?
+## LumaCue ทำอะไรได้บ้าง
 
-- Let viewers request songs through Twitch Channel Points.
-- Keep requests manageable with queue controls, global Blocklist, learned rules, and Auto DJ.
-- Show now-playing and queue overlays in OBS with a stable local Browser Source URL.
-- Add YouTube, YouTube Music, Spotify track or playlist links, and local audio files.
-- Run locally on your Windows PC with a desktop control surface and Discord Rich Presence.
+- ให้ผู้ชมขอเพลงผ่าน Twitch Channel Points
+- คุมคิวด้วย queue controls, Global Blocklist, learned rules และ Auto DJ
+- แสดง Now Playing และคิวบน OBS ผ่าน Browser Source URL ที่คงที่
+- เพิ่มเพลงจาก YouTube, YouTube Music, Spotify track/playlist และไฟล์เพลงในเครื่อง
+- ทำงานบน Windows ในเครื่อง พร้อมหน้าควบคุมและ Discord Rich Presence
 
-## Requirements
+## สิ่งที่ต้องมี
 
-- Windows 10 or newer
-- Internet connection for installation, updates, and online music resolution
-- OBS Browser Source for overlays
-- Twitch Affiliate or Partner status for Channel Points Custom Rewards
+- Windows 10 ขึ้นไป
+- อินเทอร์เน็ตสำหรับติดตั้ง อัปเดต และค้นหาเพลงออนไลน์
+- OBS Browser Source สำหรับ overlay
+- Twitch Affiliate หรือ Partner หากต้องการใช้ Channel Points Custom Rewards
 
-## Privacy and Security
+## ความเป็นส่วนตัวและความปลอดภัย
 
-- LumaCue runs its playback queue, settings, local music library, and overlay service on your PC.
-- Twitch tokens are stored locally and protected with Windows DPAPI.
-- The desktop app does not contain the Twitch client secret. The authorization service keeps that secret server-side.
+- คิวเพลง, การตั้งค่า, Local Music และบริการ overlay ทำงานบนเครื่องของคุณ
+- Twitch token ถูกเก็บในเครื่องและป้องกันด้วย Windows DPAPI
+- โปรแกรมเดสก์ท็อปไม่มี Twitch client secret; ระบบเชื่อมต่อเก็บ secret ไว้ฝั่งเซิร์ฟเวอร์
 
-## Troubleshooting
+## แก้ปัญหาเบื้องต้น
 
-- **Which file should I download?** Use `LumaCue-Setup-Offline-<version>.exe`.
-- **Twitch asks to reconnect?** Use the Broadcaster **Reconnect** button. It refreshes authorization without clearing your reward or listener setup.
-- **Channel Points reward cannot be created?** Twitch requires Affiliate or Partner status.
-- **OBS overlay is blank?** Confirm LumaCue is running and use `http://127.0.0.1:5000/overlay-player.html`.
+- **เลือกไฟล์ไหน?** ใช้ `LumaCue-Setup-Offline-<version>.exe`
+- **Twitch ให้เชื่อมใหม่?** กด **Reconnect** ฝั่ง Broadcaster เพื่อขอสิทธิ์ใหม่โดยไม่ล้าง reward หรือการรับคำขอเพลง
+- **สร้าง Channel Points ไม่ได้?** ช่องต้องเป็น Twitch Affiliate หรือ Partner
+- **OBS overlay ว่าง?** ตรวจว่า LumaCue เปิดอยู่ และใช้ `http://127.0.0.1:5000/overlay-player.html`
 
-## Source Code
+## ซอร์สโค้ด
 
-LumaCue source code is currently private while the project continues to mature. The public repository hosts installers, update packages, release notes, and setup guidance only.
+ซอร์สโค้ดของ LumaCue ยังเป็น private ระหว่างที่โปรแกรมกำลังพัฒนาต่อ หน้า public นี้เก็บเฉพาะตัวติดตั้ง, ไฟล์อัปเดต, บันทึกการเปลี่ยนแปลง และคู่มือเริ่มต้นใช้งาน
 
-Open source is a possibility for the future. Any contributor and developer documentation will be published when that decision is made.
+ในอนาคตอาจพิจารณาเปิดเป็น open source เมื่อโครงการพร้อม เมื่อตัดสินใจเปิดแล้วจึงจะเพิ่มเอกสารและคู่มือสำหรับนักพัฒนา
