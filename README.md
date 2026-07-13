@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  <a href="README.md">EN</a>
+  <a href="README.md"><strong>TH</strong></a>
   &nbsp;|&nbsp;
-  <a href="README_TH.md"><strong>TH</strong></a>
+  <a href="README_EN.md">EN</a>
   &nbsp;|&nbsp;
   <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest">ดาวน์โหลดสำหรับ Windows</a>
   &nbsp;|&nbsp;
@@ -20,23 +20,26 @@
 
 ## ดาวน์โหลด
 
-**แนะนำสำหรับผู้ใช้ทั่วไป**
+**แนะนำสำหรับผู้ใช้ทั่วไป: Setup Online**
 
 1. เปิดหน้า [release ล่าสุด](https://github.com/xyhoxx/lumacue-releases/releases/latest)
-2. ที่ส่วน **Assets** ดาวน์โหลด `LumaCue-Setup-Offline-<version>.exe`
+2. ที่ส่วน **Assets** ดาวน์โหลด `LumaCue-Setup-Online.exe`
 3. รันตัวติดตั้ง แล้วเปิด LumaCue จาก Start Menu หรือ desktop shortcut
 
-`LumaCue-Setup-Offline-<version>.exe` มีทั้งโปรแกรมและไฟล์ที่จำเป็นต่อการทำงานอยู่แล้ว ไม่ต้องโหลด ZIP, patch, runtime, `latest.yml` หรือ manifest ด้วยตัวเอง
+`LumaCue-Setup-Online.exe` เป็นตัวติดตั้งขนาดเล็กและเร็วที่สุด โดยจะดาวน์โหลดโปรแกรมเวอร์ชันปัจจุบันระหว่างติดตั้ง จึงต้องใช้อินเทอร์เน็ต
+
+ใช้ `LumaCue-Setup-Offline-<version>.exe` เมื่ออยากเก็บตัวติดตั้งเต็มไว้สำหรับเครื่องที่ไม่มีอินเทอร์เน็ตตอนติดตั้ง
 
 | ไฟล์ | ใช้เมื่อ... | สำหรับ... |
 | --- | --- | --- |
-| `LumaCue-Setup-Offline-<version>.exe` | ต้องการติดตั้ง LumaCue ตามปกติ | ผู้ใช้ทั่วไปและการติดตั้งครั้งแรก |
+| `LumaCue-Setup-Online.exe` | มีอินเทอร์เน็ตและต้องการติดตั้งให้เร็วที่สุด | แนะนำสำหรับผู้ใช้ทั่วไป |
+| `LumaCue-Setup-Offline-<version>.exe` | เครื่องไม่มีอินเทอร์เน็ตตอนติดตั้ง หรือต้องการเก็บตัวติดตั้งเต็มไว้ | ติดตั้งแบบออฟไลน์หรือเก็บไว้ใช้ซ้ำ |
 | `LumaCue-win-x64-<version>.zip` | ต้องการ full portable package โดยเฉพาะ | ผู้ใช้ขั้นสูงเท่านั้น |
 | `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | ไม่ต้องใช้สำหรับการติดตั้งปกติ | โปรแกรมอัปเดตจัดการให้อัตโนมัติ |
 
 ## เริ่มต้นใช้งาน
 
-1. **ติดตั้ง LumaCue** ด้วย offline installer
+1. **ติดตั้ง LumaCue** ด้วย Setup Online หรือใช้ตัว Offline เมื่อจำเป็น
 2. เปิดหน้า **Twitch** ใน LumaCue แล้วเชื่อมต่อบัญชี **Broadcaster** หากโปรแกรมต้องขอสิทธิ์ Twitch เพิ่ม ให้กด **Reconnect**
 3. สร้างหรือเลือก Channel Points reward แล้วเริ่มรับคำขอเพลง
 4. เพิ่ม OBS **Browser Source** ด้วย URL นี้
@@ -56,7 +59,7 @@
 ## สิ่งที่ต้องมี
 
 - Windows 10 ขึ้นไป
-- อินเทอร์เน็ตสำหรับติดตั้ง อัปเดต และค้นหาเพลงออนไลน์
+- อินเทอร์เน็ตสำหรับ Setup Online, การอัปเดต และค้นหาเพลงออนไลน์
 - OBS Browser Source สำหรับ overlay
 - Twitch Affiliate หรือ Partner หากต้องการใช้ Channel Points Custom Rewards
 
@@ -68,7 +71,7 @@
 
 ## แก้ปัญหาเบื้องต้น
 
-- **เลือกไฟล์ไหน?** ใช้ `LumaCue-Setup-Offline-<version>.exe`
+- **เลือกไฟล์ไหน?** ถ้ามีอินเทอร์เน็ต ให้ใช้ `LumaCue-Setup-Online.exe`; หากต้องติดตั้งแบบไม่มีอินเทอร์เน็ต ให้ใช้ `LumaCue-Setup-Offline-<version>.exe`
 - **Twitch ให้เชื่อมใหม่?** กด **Reconnect** ฝั่ง Broadcaster เพื่อขอสิทธิ์ใหม่โดยไม่ล้าง reward หรือการรับคำขอเพลง
 - **สร้าง Channel Points ไม่ได้?** ช่องต้องเป็น Twitch Affiliate หรือ Partner
 - **OBS overlay ว่าง?** ตรวจว่า LumaCue เปิดอยู่ และใช้ `http://127.0.0.1:5000/overlay-player.html`
