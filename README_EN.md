@@ -34,7 +34,7 @@ Use `LumaCue-Setup-Offline-<version>.exe` when you want to save the full install
 | --- | --- | --- |
 | `LumaCue-Setup-Online.exe` | You have internet access and want the fastest, smallest installer. | Recommended for most users |
 | `LumaCue-Setup-Offline-<version>.exe` | The PC will be offline during installation, or you want to keep a full installer. | Offline or reusable installation |
-| `LumaCue-win-x64-<version>.zip` | You specifically need the full portable package. | Advanced users only |
+| `LumaCue-win-x64-<version>.zip` | You want to use LumaCue as a portable app without installing it. | People who do not want to install |
 | `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | Never for a normal manual install. | Managed automatically by the updater |
 
 ## Quick Start
@@ -71,17 +71,17 @@ Use `LumaCue-Setup-Offline-<version>.exe` when you want to save the full install
 
 ### Security Verification
 
-LumaCue `v0.8.0` is classified as **Clean** by [Kaspersky OpenTIP](https://opentip.kaspersky.com/2A17E9EA05FD27CE2D2D7B9AE1905DEB0F2C47CEDE89A170CE7C90CE5BF9A23A/results?tab) for the following `LumaCue.exe` SHA-256:
+LumaCue `v0.8.2` is classified as **Clean** by [Kaspersky OpenTIP](https://opentip.kaspersky.com/2F313F3DB264727E1737F8CC5F77AC4A65D06DA7717FB32B9DF7F16161F3E640/results) for the following `LumaCue.exe` SHA-256:
 
-`2A17E9EA05FD27CE2D2D7B9AE1905DEB0F2C47CEDE89A170CE7C90CE5BF9A23A`
+`2F313F3DB264727E1737F8CC5F77AC4A65D06DA7717FB32B9DF7F16161F3E640`
 
-The dynamic analysis reports `0` detections and `0` suspicious activities. Its single network activity is categorized as `Good`, not as a threat detection.
+The dynamic analysis reports `0` detections, `0` suspicious activities, and `0` network activities. It lists `2` extracted files, which are analysis artifacts rather than threat detections.
 
-![Kaspersky OpenTIP dynamic analysis for LumaCue v0.8.0](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.0-dynamic-analysis.png)
+![Kaspersky OpenTIP dynamic analysis for LumaCue v0.8.2](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.2-dynamic-analysis.png)
 
-VirusTotal scanned the same file hash with 69 security vendors, and **none flagged it as malicious (`0/69`)** at the time of the scan ([view the scan result](https://www.virustotal.com/gui/file/2a17e9ea05fd27ce2d2d7b9ae1905deb0f2c47cede89a170ce7c90ce5bf9a23a/detection)).
+VirusTotal scanned the same file hash with 69 security vendors, and **none flagged it as malicious (`0/69`)** at the time of the scan ([view the scan result](https://www.virustotal.com/gui/file/2f313f3db264727e1737f8cc5f77ac4a65d06da7717fb32b9df7f16161f3e640/detection)).
 
-![VirusTotal detection result for LumaCue v0.8.0](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.0-detection.png)
+![VirusTotal detection result for LumaCue v0.8.2](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.2-detection.png)
 
 This result applies only to the file and hash above. Always download installers from the official release page.
 
