@@ -2,6 +2,27 @@
 
 Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
 
+## 0.8.0 - Twitch Reply Reliability and Language Rollout
+
+### Added
+- Added a Broadcaster Reconnect action that starts a fresh Twitch authorization without removing the saved reward, EventSub configuration, or fixed bot setup.
+- Added the `user:read:chat` broadcaster permission to support artist-choice replies from Twitch chat when the fixed server-side bot is active.
+
+### Changed
+- Standardized Twitch redemption input cleanup with normal desktop song requests, including Unicode normalization, hidden chat characters, request triggers, and repeated whitespace.
+- Kept English as the currently available desktop language while Thai remains visible as an upcoming option during the UI localization rollout.
+
+### Fixed
+- Fixed Twitch artist-choice prompts that accepted a request but could not receive a viewer's `1`, `2`, or `3` reply when using the fixed server-side bot.
+- Fixed redemption searches treating formatted chat input differently from direct desktop searches before resolver matching.
+- Removed redundant Request Song reward heading from the Channel Points card.
+
+### Added
+- Added a Channel Points redemption switch in the Twitch reward card. The switch enables or disables the selected Twitch Custom Reward directly, while keeping the saved reward, accounts, and EventSub setup intact.
+
+### Removed
+- Removed the Album Motion system from the Player and OBS overlay paths because the generated artwork motion did not fit the product direction. Existing static artwork backdrop, cover spin, pulse, glow, and other overlay effects remain available.
+
 ## 0.7.9 - Spotify Playlist Imports
 
 ### Added
