@@ -15,7 +15,7 @@
   &nbsp;|&nbsp;
   <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest">Download for Windows</a>
   &nbsp;|&nbsp;
-  <a href="CHANGELOG.md">Changelog</a>
+  <a href="CHANGELOG_EN.md">Changelog</a>
 </p>
 
 ## Download
