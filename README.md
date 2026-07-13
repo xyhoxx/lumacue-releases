@@ -34,7 +34,7 @@
 | --- | --- | --- |
 | `LumaCue-Setup-Online.exe` | มีอินเทอร์เน็ตและต้องการติดตั้งให้เร็วที่สุด | แนะนำสำหรับผู้ใช้ทั่วไป |
 | `LumaCue-Setup-Offline-<version>.exe` | เครื่องไม่มีอินเทอร์เน็ตตอนติดตั้ง หรือต้องการเก็บตัวติดตั้งเต็มไว้ | ติดตั้งแบบออฟไลน์หรือเก็บไว้ใช้ซ้ำ |
-| `LumaCue-win-x64-<version>.zip` | ต้องการ full portable package โดยเฉพาะ | ผู้ใช้ขั้นสูงเท่านั้น |
+| `LumaCue-win-x64-<version>.zip` | ต้องการใช้ LumaCue แบบพกพาโดยไม่ติดตั้ง | คนที่ไม่ต้องการติดตั้ง |
 | `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | ไม่ต้องใช้สำหรับการติดตั้งปกติ | โปรแกรมอัปเดตจัดการให้อัตโนมัติ |
 
 ## เริ่มต้นใช้งาน
@@ -71,17 +71,17 @@
 
 ### ผลตรวจสอบความปลอดภัย
 
-LumaCue `v0.8.0` ได้รับผล **Clean** จาก [Kaspersky OpenTIP](https://opentip.kaspersky.com/2A17E9EA05FD27CE2D2D7B9AE1905DEB0F2C47CEDE89A170CE7C90CE5BF9A23A/results?tab) สำหรับไฟล์ `LumaCue.exe` ที่มี SHA-256:
+LumaCue `v0.8.2` ได้รับผล **Clean** จาก [Kaspersky OpenTIP](https://opentip.kaspersky.com/2F313F3DB264727E1737F8CC5F77AC4A65D06DA7717FB32B9DF7F16161F3E640/results) สำหรับไฟล์ `LumaCue.exe` ที่มี SHA-256:
 
-`2A17E9EA05FD27CE2D2D7B9AE1905DEB0F2C47CEDE89A170CE7C90CE5BF9A23A`
+`2F313F3DB264727E1737F8CC5F77AC4A65D06DA7717FB32B9DF7F16161F3E640`
 
-การวิเคราะห์แบบ dynamic รายงาน `0` detections และ `0` suspicious activities. Network activity ที่พบ 1 รายการถูกจัดเป็น `Good` ไม่ใช่การตรวจพบภัยคุกคาม
+การวิเคราะห์แบบ dynamic รายงาน `0` detections, `0` suspicious activities และ `0` network activities. พบ extracted files `2` รายการ ซึ่งเป็นไฟล์ที่แยกออกมาเพื่อการวิเคราะห์ ไม่ใช่การตรวจพบภัยคุกคาม
 
-![ผลการวิเคราะห์ Kaspersky OpenTIP ของ LumaCue v0.8.0](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.0-dynamic-analysis.png)
+![ผลการวิเคราะห์ Kaspersky OpenTIP ของ LumaCue v0.8.2](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.2-dynamic-analysis.png)
 
-VirusTotal สแกนไฟล์ hash เดียวกันด้วยเอนจินความปลอดภัย 69 ราย และ **ไม่มีรายใดตรวจพบว่าเป็นอันตราย (`0/69`)** ณ เวลาที่สแกน ([ดูผลสแกน](https://www.virustotal.com/gui/file/2a17e9ea05fd27ce2d2d7b9ae1905deb0f2c47cede89a170ce7c90ce5bf9a23a/detection))
+VirusTotal สแกนไฟล์ hash เดียวกันด้วยเอนจินความปลอดภัย 69 ราย และ **ไม่มีรายใดตรวจพบว่าเป็นอันตราย (`0/69`)** ณ เวลาที่สแกน ([ดูผลสแกน](https://www.virustotal.com/gui/file/2f313f3db264727e1737f8cc5f77ac4a65d06da7717fb32b9df7f16161f3e640/detection))
 
-![ผลการตรวจ VirusTotal ของ LumaCue v0.8.0](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.0-detection.png)
+![ผลการตรวจ VirusTotal ของ LumaCue v0.8.2](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.2-detection.png)
 
 ผลนี้ครอบคลุมเฉพาะไฟล์และ hash ข้างต้นเท่านั้น โปรดดาวน์โหลดตัวติดตั้งจากหน้า release อย่างเป็นทางการเสมอ
 
