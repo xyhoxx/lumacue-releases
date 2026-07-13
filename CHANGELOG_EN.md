@@ -4,6 +4,17 @@ Product release notes for LumaCue desktop builds. Public releases contain built 
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.1 - Hotfix: Auto DJ and Native Launcher
+
+### Fixed
+- Auto DJ now uses the currently playing track and upcoming queue tracks as the primary seeds for related-track and same-artist discovery instead of beginning from play history.
+- The default Auto DJ configuration no longer re-adds old play-history tracks. Deliberate custom history source settings remain supported.
+
+### Changed
+- Began the migration from the Electron bootstrap launcher to a compact native Windows launcher. Existing Electron launchers can self-update through the established manifest contract.
+- After native takeover, only obsolete Electron bootstrap files such as resources, locales, and Chromium runtime files are removed. The current app version, shared runtime, and user data remain intact.
+- Preserved uninstall behavior, SHA-512 verification, patch/app-only/runtime updates, and offline fallback.
+
 ## 0.8.0 - Twitch Reply Reliability and Language Rollout
 
 ### Added
