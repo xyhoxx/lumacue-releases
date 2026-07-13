@@ -69,6 +69,18 @@
 - Twitch token ถูกเก็บในเครื่องและป้องกันด้วย Windows DPAPI
 - โปรแกรมเดสก์ท็อปไม่มี Twitch client secret; ระบบเชื่อมต่อเก็บ secret ไว้ฝั่งเซิร์ฟเวอร์
 
+### ผลตรวจสอบความปลอดภัย
+
+LumaCue `v0.8.0` ได้รับผล **Clean** จาก [Kaspersky OpenTIP](https://opentip.kaspersky.com/2A17E9EA05FD27CE2D2D7B9AE1905DEB0F2C47CEDE89A170CE7C90CE5BF9A23A/results?tab) สำหรับไฟล์ `LumaCue.exe` ที่มี SHA-256:
+
+`2A17E9EA05FD27CE2D2D7B9AE1905DEB0F2C47CEDE89A170CE7C90CE5BF9A23A`
+
+การวิเคราะห์แบบ dynamic รายงาน `0` detections และ `0` suspicious activities. Network activity ที่พบ 1 รายการถูกจัดเป็น `Good` ไม่ใช่การตรวจพบภัยคุกคาม
+
+![ผลการวิเคราะห์ Kaspersky OpenTIP ของ LumaCue v0.8.0](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.0-dynamic-analysis.png)
+
+ผลนี้ครอบคลุมเฉพาะไฟล์และ hash ข้างต้นเท่านั้น โปรดดาวน์โหลดตัวติดตั้งจากหน้า release อย่างเป็นทางการเสมอ
+
 ## แก้ปัญหาเบื้องต้น
 
 - **เลือกไฟล์ไหน?** ถ้ามีอินเทอร์เน็ต ให้ใช้ `LumaCue-Setup-Online.exe`; หากต้องติดตั้งแบบไม่มีอินเทอร์เน็ต ให้ใช้ `LumaCue-Setup-Offline-<version>.exe`
@@ -80,4 +92,4 @@
 
 ซอร์สโค้ดของ LumaCue ยังเป็น private ระหว่างที่โปรแกรมกำลังพัฒนาต่อ หน้า public นี้เก็บเฉพาะตัวติดตั้ง, ไฟล์อัปเดต, บันทึกการเปลี่ยนแปลง และคู่มือเริ่มต้นใช้งาน
 
-ในอนาคตอาจพิจารณาเปิดเป็น open source เมื่อพร้อม เมื่อตัดสินใจเปิดแล้วจึงจะเพิ่มเอกสารและคู่มือสำหรับนักพัฒนา
+ในอนาคตอาจพิจารณาเปิดเป็น open source เมื่อโครงการพร้อม เมื่อตัดสินใจเปิดแล้วจึงจะเพิ่มเอกสารและคู่มือสำหรับนักพัฒนา
