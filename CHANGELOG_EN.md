@@ -4,6 +4,12 @@ Product release notes for LumaCue desktop builds. Public releases contain built 
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.2 - Hotfix: Native Launcher Interface
+
+### Fixed
+- Rebuilt the native launcher window around the LumaCue visual system: rounded dark shell, brand treatment, clear status, warm progress track, and readable footer.
+- Removed the default white Windows title bar and green system progress appearance that did not match the application.
+
 ## 0.8.1 - Hotfix: Auto DJ and Native Launcher
 
 ### Fixed
