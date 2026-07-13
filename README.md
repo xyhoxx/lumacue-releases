@@ -15,7 +15,7 @@
   &nbsp;|&nbsp;
   <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest">ดาวน์โหลดสำหรับ Windows</a>
   &nbsp;|&nbsp;
-  <a href="CHANGELOG_TH.md">บันทึกการเปลี่ยนแปลง</a>
+  <a href="CHANGELOG.md">บันทึกการเปลี่ยนแปลง</a>
 </p>
 
 ## ดาวน์โหลด
