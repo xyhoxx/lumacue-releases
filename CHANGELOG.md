@@ -4,6 +4,16 @@
 
 **ภาษา:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.3 - Hotfix: ลดการใช้ทรัพยากรและแก้รอยต่อ Player
+
+### ปรับปรุง
+- ลดงาน render ที่ไม่จำเป็นโดยลบ particle layer ที่มองแทบไม่เห็น, หยุด animation และ polling เมื่อหน้าต่างหรือมุมมองถูกซ่อน และส่งเวลาเล่นแบบย่อแทนการส่งสถานะคิวทั้งหมดทุกวินาที
+- ใช้ URL artwork เดียวกันสำหรับ backdrop ของ shell และ Player พร้อมจำกัดการปรับตำแหน่งระหว่างขยาย sidebar ไว้ใน animation frame เดียว โดยไม่สร้าง bitmap เต็มหน้าต่างซ้ำ
+
+### แก้ไข
+- ให้การหมุน artwork ของเพลง Local Music และ direct audio เริ่มและหยุดตามสถานะเล่นจริง
+- แก้ความต่างของสีและความสว่างระหว่าง shell กับ Player iframe รวมถึงเส้นรอยต่อหนึ่งพิกเซลข้าง sidebar
+
 ## 0.8.2 - Hotfix: ปรับหน้าตา native launcher
 
 ### แก้ไข
