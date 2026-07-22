@@ -4,6 +4,16 @@ Product release notes for LumaCue desktop builds. Public releases contain built 
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.3 - Hotfix: Resource Use and Player Seams
+
+### Improved
+- Reduced unnecessary rendering by removing the barely visible particle layer, suspending animation and polling while the window or view is hidden, and sending compact playback progress instead of a full queue snapshot every second.
+- Reused the original artwork URL for both shell and Player backdrops, with sidebar geometry updates bounded to one animation-frame scheduler and no duplicated full-window bitmap.
+
+### Fixed
+- Made Local Music and direct-audio artwork rotation start and stop with actual playback.
+- Matched shell and Player iframe color treatment and removed the one-pixel seam beside the sidebar.
+
 ## 0.8.2 - Hotfix: Native Launcher Interface
 
 ### Fixed
