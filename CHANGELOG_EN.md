@@ -4,6 +4,21 @@ Product release notes for LumaCue desktop builds. Public releases contain built 
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.4 - Hotfix: Startup Playback, Overlay, and Release Checks
+
+### Fixed
+- Fixed the first track after startup sometimes retaining the `Waiting for a song...` title after playback had begun.
+- Changed the overlay default to remain visible instead of tucking automatically, with a one-time migration for existing settings while preserving the option to enable auto-tuck.
+- Kept dependency-based Overlay Settings controls visible in a disabled state instead of removing them from the page.
+- Removed sharp corners around the native launcher shadow by keeping the shadow inside the transparent window bounds.
+- Changed duplicate-title Twitch selection to accept artist names directly and resolve an additional artist when the initial suggestions do not contain the requested one.
+- Made the Python backend and Player iframe honor the desktop-selected port consistently, reducing startup failures when the default port is unavailable.
+
+### Improved
+- Added a CI/CD release gate covering Python, renderer, launcher, Discord, updater, and native launcher tests before artifacts are built.
+- Added a packaged smoke test that launches the real `win-unpacked` application and verifies the backend, Player iframe, Library, and process cleanup.
+- Updated `electron-updater`, `electron-builder`, and related dependencies to patched releases. The production dependency audit reports no known vulnerabilities for this release candidate.
+
 ## 0.8.3 - Hotfix: Resource Use and Player Seams
 
 ### Improved
