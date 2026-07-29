@@ -71,17 +71,17 @@ Use `LumaCue-Setup-Offline-<version>.exe` when you want to save the full install
 
 ### Security Verification
 
-LumaCue `v0.8.4` is classified as **Clean** by [Kaspersky OpenTIP](https://opentip.kaspersky.com/7CBF8A288F6673CA955F7591571A6C85376ECECF63B628520A1F968C5EA89165/results) for `LumaCue.exe` inside `LumaCue-app-win-x64-0.8.4.zip`, with the following SHA-256:
+LumaCue `v0.8.5` was analyzed by [Kaspersky OpenTIP](https://opentip.kaspersky.com/C83E8CFFAAFB4F9FFF39E00EDD936720F563A6C842A168F9A43B2F07EE12C793/results). The analyzed file is `LumaCue.exe` inside `LumaCue-app-win-x64-0.8.5.zip`, with the following SHA-256:
 
-`7CBF8A288F6673CA955F7591571A6C85376ECECF63B628520A1F968C5EA89165`
+`C83E8CFFAAFB4F9FFF39E00EDD936720F563A6C842A168F9A43B2F07EE12C793`
 
-The dynamic analysis reports `0` detections, `0` suspicious activities, and `1` network activity classified as **Good**. It lists `2` extracted files, which are analysis artifacts rather than threat detections.
+The dynamic analysis reports `0` detections and `0` suspicious activities. It lists `1` network activity and `2` extracted files as not categorized; these are not threat detections.
 
-![Kaspersky OpenTIP dynamic analysis for LumaCue v0.8.4](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.4-dynamic-analysis.png)
+![Kaspersky OpenTIP dynamic analysis for LumaCue v0.8.5](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.5-dynamic-analysis.png)
 
-VirusTotal scanned the same file hash with 69 security vendors, and **none flagged it as malicious (`0/69`)** at the time of the scan ([view the scan result](https://www.virustotal.com/gui/file/7cbf8a288f6673ca955f7591571a6c85376ececf63b628520a1f968c5ea89165/detection)).
+VirusTotal scanned the same file hash with 69 security vendors, and **none flagged it as malicious (`0/69`)** at the time of the scan ([view the scan result](https://www.virustotal.com/gui/file/c83e8cffaafb4f9fff39e00edd936720f563a6c842a168f9a43b2f07ee12c793/detection)).
 
-![VirusTotal detection result for LumaCue v0.8.4](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.4-detection.png)
+![VirusTotal detection result for LumaCue v0.8.5](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.5-detection.png)
 
 This result applies only to the file and hash above. Always download installers from the official release page.
 
