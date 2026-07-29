@@ -4,6 +4,12 @@ Product release notes for LumaCue desktop builds. Public releases contain built 
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.5 - Hotfix: First Track Title After Startup
+
+### Fixed
+- Fixed the remaining startup path where language synchronization could overwrite the restored first track title with `Waiting for a song...`.
+- Separated the dynamic track title from static translations while preserving localized idle text when no track is active.
+
 ## 0.8.4 - Hotfix: Startup Playback, Overlay, and Release Checks
 
 ### Fixed
