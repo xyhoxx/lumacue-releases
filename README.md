@@ -71,17 +71,17 @@
 
 ### ผลตรวจสอบความปลอดภัย
 
-LumaCue `v0.8.4` ได้รับผล **Clean** จาก [Kaspersky OpenTIP](https://opentip.kaspersky.com/7CBF8A288F6673CA955F7591571A6C85376ECECF63B628520A1F968C5EA89165/results) สำหรับไฟล์ `LumaCue.exe` ภายในแพ็กเกจ `LumaCue-app-win-x64-0.8.4.zip` ที่มี SHA-256:
+LumaCue `v0.8.5` ได้รับการวิเคราะห์จาก [Kaspersky OpenTIP](https://opentip.kaspersky.com/C83E8CFFAAFB4F9FFF39E00EDD936720F563A6C842A168F9A43B2F07EE12C793/results) สำหรับไฟล์ `LumaCue.exe` ภายในแพ็กเกจ `LumaCue-app-win-x64-0.8.5.zip` ที่มี SHA-256:
 
-`7CBF8A288F6673CA955F7591571A6C85376ECECF63B628520A1F968C5EA89165`
+`C83E8CFFAAFB4F9FFF39E00EDD936720F563A6C842A168F9A43B2F07EE12C793`
 
-การวิเคราะห์แบบ dynamic รายงาน `0` detections, `0` suspicious activities และ network activity `1` รายการที่จัดเป็น **Good**. พบ extracted files `2` รายการ ซึ่งเป็นไฟล์ที่แยกออกมาเพื่อการวิเคราะห์ ไม่ใช่การตรวจพบภัยคุกคาม
+การวิเคราะห์แบบ dynamic รายงาน `0` detections และ `0` suspicious activities. พบ network activity `1` รายการและ extracted files `2` รายการที่ยังไม่ถูกจัดหมวดหมู่ ซึ่งไม่ใช่การตรวจพบภัยคุกคาม
 
-![ผลการวิเคราะห์ Kaspersky OpenTIP ของ LumaCue v0.8.4](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.4-dynamic-analysis.png)
+![ผลการวิเคราะห์ Kaspersky OpenTIP ของ LumaCue v0.8.5](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.5-dynamic-analysis.png)
 
-VirusTotal สแกนไฟล์ hash เดียวกันด้วยเอนจินความปลอดภัย 69 ราย และ **ไม่มีรายใดตรวจพบว่าเป็นอันตราย (`0/69`)** ณ เวลาที่สแกน ([ดูผลสแกน](https://www.virustotal.com/gui/file/7cbf8a288f6673ca955f7591571a6c85376ececf63b628520a1f968c5ea89165/detection))
+VirusTotal สแกนไฟล์ hash เดียวกันด้วยเอนจินความปลอดภัย 69 ราย และ **ไม่มีรายใดตรวจพบว่าเป็นอันตราย (`0/69`)** ณ เวลาที่สแกน ([ดูผลสแกน](https://www.virustotal.com/gui/file/c83e8cffaafb4f9fff39e00edd936720f563a6c842a168f9a43b2f07ee12c793/detection))
 
-![ผลการตรวจ VirusTotal ของ LumaCue v0.8.4](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.4-detection.png)
+![ผลการตรวจ VirusTotal ของ LumaCue v0.8.5](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.5-detection.png)
 
 ผลนี้ครอบคลุมเฉพาะไฟล์และ hash ข้างต้นเท่านั้น โปรดดาวน์โหลดตัวติดตั้งจากหน้า release อย่างเป็นทางการเสมอ
 
