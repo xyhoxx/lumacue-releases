@@ -1,6 +1,6 @@
-# LumaCue Changelog
+# LumaCue Updates
 
-Product release notes for LumaCue desktop builds. Public releases contain built installer and update artifacts only.
+What changed in each public LumaCue release, from `0.1.1` through the latest version. This repository contains the built installers and update files, not the source code.
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
