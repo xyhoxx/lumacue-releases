@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>รับเพลงจากคนดูบน Twitch จัดคิวให้ และขึ้นข้อมูลเพลงบน OBS สำหรับสตรีมเมอร์ Windows</strong>
+  <strong>แอปบน Windows สำหรับรับเพลงที่คนดูขอผ่าน Twitch จัดการคิว และแสดงข้อมูลเพลงบน OBS</strong>
 </p>
 
 <p align="center">
@@ -15,33 +15,33 @@
   &nbsp;|&nbsp;
   <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest">ดาวน์โหลดสำหรับ Windows</a>
   &nbsp;|&nbsp;
-  <a href="CHANGELOG.md">อัปเดตแต่ละรุ่น</a>
+  <a href="CHANGELOG.md">ประวัติการอัปเดต</a>
 </p>
 
 ## ดาวน์โหลด
 
-**ถ้ามีอินเทอร์เน็ต ให้ใช้ Setup Online**
+**ถ้ามีอินเทอร์เน็ต แนะนำให้ใช้ Setup Online**
 
 1. เปิดหน้า [release ล่าสุด](https://github.com/xyhoxx/lumacue-releases/releases/latest)
 2. ที่ส่วน **Assets** ดาวน์โหลด `LumaCue-Setup-Online.exe`
-3. รันตัวติดตั้ง แล้วเปิด LumaCue จาก Start Menu หรือ desktop shortcut
+3. เปิดไฟล์ติดตั้ง แล้วเปิด LumaCue จาก Start Menu หรือไอคอนลัดบนเดสก์ท็อป
 
-`LumaCue-Setup-Online.exe` เล็กและติดตั้งเร็วที่สุด ตัวติดตั้งจะดาวน์โหลด LumaCue รุ่นล่าสุดให้ระหว่างทาง จึงต้องต่ออินเทอร์เน็ต
+`LumaCue-Setup-Online.exe` มีขนาดเล็กและใช้เวลาติดตั้งน้อยกว่า เพราะตัวติดตั้งจะดาวน์โหลด LumaCue รุ่นล่าสุดระหว่างการติดตั้ง จึงต้องเชื่อมต่ออินเทอร์เน็ต
 
-ถ้าจะติดตั้งตอนออฟไลน์ หรืออยากเก็บตัวติดตั้งเต็มไว้ใช้ทีหลัง ให้เลือก `LumaCue-Setup-Offline-<version>.exe`
+ถ้าต้องการติดตั้งโดยไม่ใช้อินเทอร์เน็ต หรืออยากเก็บตัวติดตั้งแบบครบชุดไว้ใช้ภายหลัง ให้เลือก `LumaCue-Setup-Offline-<version>.exe`
 
-| ไฟล์ | ใช้เมื่อ... | สำหรับ... |
+| ไฟล์ | เหมาะกับกรณีไหน | หมายเหตุ |
 | --- | --- | --- |
-| `LumaCue-Setup-Online.exe` | มีอินเทอร์เน็ตและอยากติดตั้งแบบเร็ว ๆ | ตัวเลือกแนะนำ |
-| `LumaCue-Setup-Offline-<version>.exe` | จะติดตั้งตอนออฟไลน์ หรืออยากเก็บตัวติดตั้งเต็มไว้ | ติดตั้งออฟไลน์หรือใช้ซ้ำ |
-| `LumaCue-win-x64-<version>.zip` | อยากเปิดใช้แบบพกพา ไม่ต้องติดตั้ง | คนที่ไม่อยากติดตั้ง |
-| `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | ไม่ต้องโหลดเอง | LumaCue ใช้ตอนอัปเดต |
+| `LumaCue-Setup-Online.exe` | ติดตั้งบนเครื่องที่เชื่อมต่ออินเทอร์เน็ต | แนะนำสำหรับผู้ใช้ส่วนใหญ่ |
+| `LumaCue-Setup-Offline-<version>.exe` | ติดตั้งโดยไม่ใช้อินเทอร์เน็ต หรือต้องการเก็บตัวติดตั้งแบบครบชุดไว้ | ดาวน์โหลดครั้งเดียวและนำไปใช้ซ้ำได้ |
+| `LumaCue-win-x64-<version>.zip` | ต้องการเปิดโปรแกรมโดยไม่ผ่านขั้นตอนติดตั้ง | เหมาะกับการใช้งานแบบพกพา |
+| `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | ไม่ต้องโหลดเอง | LumaCue และระบบอัปเดตจะจัดการไฟล์เหล่านี้ให้ |
 
 ## เริ่มต้นใช้งาน
 
-1. ติดตั้ง LumaCue ด้วย Setup Online หรือใช้ตัว Offline ถ้าจำเป็น
-2. เปิดหน้า **Twitch** แล้วเชื่อมบัญชี **Broadcaster** ถ้า LumaCue ต้องขอสิทธิ์เพิ่ม ให้กด **Reconnect**
-3. สร้างหรือเลือก Channel Points reward แล้วกดเริ่มรับเพลง
+1. ติดตั้ง LumaCue ด้วย Setup Online หรือใช้ตัว Offline ถ้าต้องการติดตั้งโดยไม่ใช้อินเทอร์เน็ต
+2. เปิดหน้า **Twitch** แล้วเชื่อมบัญชี **Broadcaster** ถ้า LumaCue แจ้งว่าต้องขอสิทธิ์เพิ่ม ให้กด **Reconnect**
+3. สร้างหรือเลือกรางวัล Channel Points ที่จะใช้รับคำขอเพลง จากนั้นกดเริ่มรับเพลง
 4. เพิ่ม **Browser Source** ใน OBS ด้วย URL นี้
 
    ```text
@@ -50,24 +50,24 @@
 
 ## ทำอะไรได้บ้าง
 
-- ให้คนดูขอเพลงผ่าน Twitch Channel Points
-- เรียง ลบ และคุมคิวด้วย Global Blocklist, learned rules และ Auto DJ
-- ขึ้นเพลงที่กำลังเล่นและคิวบน OBS ผ่าน Browser Source URL เดิมทุกครั้ง
-- รับเพลงจาก YouTube, YouTube Music, Spotify track/playlist และไฟล์เพลงในเครื่อง
-- ทำงานบนเครื่อง Windows พร้อมหน้าควบคุมและ Discord Rich Presence
+- เปิดให้คนดูขอเพลงผ่าน Twitch Channel Points
+- จัดลำดับ ลบ และดูแลคิวด้วย Global Blocklist, learned rules และ Auto DJ
+- แสดงเพลงที่กำลังเล่นและเพลงในคิวบน OBS ผ่าน Browser Source โดยใช้ URL เดิมได้ทุกครั้ง
+- เพิ่มเพลงจาก YouTube, YouTube Music, Spotify track/playlist และไฟล์เพลงในเครื่อง
+- ควบคุมการเล่นเพลงจากแอปบน Windows และแสดงสถานะเพลงใน Discord ผ่าน Rich Presence
 
 ## สิ่งที่ต้องมี
 
 - Windows 10 ขึ้นไป
 - อินเทอร์เน็ตสำหรับ Setup Online, อัปเดตโปรแกรม และค้นหาเพลงออนไลน์
-- OBS Browser Source ถ้าจะใช้ overlay
-- สถานะ Twitch Affiliate หรือ Partner ถ้าจะรับเพลงผ่าน Channel Points
+- OBS ที่รองรับ Browser Source ถ้าต้องการใช้ overlay
+- สถานะ Twitch Affiliate หรือ Partner ถ้าต้องการรับเพลงผ่าน Channel Points
 
 ## ความเป็นส่วนตัวและความปลอดภัย
 
-- คิว การตั้งค่า คลัง Local Music และ overlay ทั้งหมดทำงานบนเครื่องของคุณ
-- Twitch token เก็บไว้ในเครื่องและเข้ารหัสด้วย Windows DPAPI
-- ตัวโปรแกรมไม่มี Twitch client secret ข้อมูลส่วนนี้อยู่ฝั่งเซิร์ฟเวอร์ที่ใช้เชื่อมบัญชี
+- ข้อมูลคิว การตั้งค่า คลัง Local Music และค่าของ overlay จะถูกเก็บและทำงานอยู่บนเครื่องของคุณ
+- Twitch token จะถูกเก็บไว้ในเครื่อง โดยเข้ารหัสด้วย Windows DPAPI
+- แอปไม่ได้ฝัง Twitch client secret ไว้ในไฟล์โปรแกรม ข้อมูลส่วนนี้อยู่บนเซิร์ฟเวอร์ที่ใช้สำหรับเชื่อมบัญชี
 
 ### ผลตรวจสอบความปลอดภัย
 
@@ -75,25 +75,25 @@
 
 `78F1EF8EB881B09A91F46E4181A619F8D8504F479CAD412A8942757B86FFAA36`
 
-[VirusTotal](https://www.virustotal.com/gui/file/78f1ef8eb881b09a91f46e4181a619f8d8504f479cad412a8942757b86ffaa36/detection) ขึ้น `0/68` ไม่มีเอนจินใดแจ้งว่าไฟล์นี้เป็นอันตรายในตอนที่สแกน
+[VirusTotal](https://www.virustotal.com/gui/file/78f1ef8eb881b09a91f46e4181a619f8d8504f479cad412a8942757b86ffaa36/detection) รายงานผล `0/68` หมายความว่าไม่มีผู้ให้บริการสแกนรายใดแจ้งว่าไฟล์นี้เป็นอันตรายในตอนที่ตรวจ
 
 ![ผลสแกน VirusTotal ของ LumaCue v0.8.6](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.6-detection.png)
 
-[Kaspersky OpenTIP](https://opentip.kaspersky.com/78F1EF8EB881B09A91F46E4181A619F8D8504F479CAD412A8942757B86FFAA36/results) ขึ้น `0` detections และ `0` suspicious activities ส่วน network activity `1` รายการถูกจัดเป็น Good และไฟล์ที่แยกออกมา `2` รายการยังไม่ถูกจัดหมวดหมู่ ไม่ใช่การแจ้งเตือนมัลแวร์
+[Kaspersky OpenTIP](https://opentip.kaspersky.com/78F1EF8EB881B09A91F46E4181A619F8D8504F479CAD412A8942757B86FFAA36/results) รายงาน `0` detections และ `0` suspicious activities ส่วน network activity `1` รายการถูกจัดเป็น Good ขณะที่ไฟล์ที่แยกออกมา `2` รายการยังไม่ได้จัดหมวดหมู่ ซึ่งไม่ใช่การแจ้งเตือนมัลแวร์
 
 ![ผลวิเคราะห์ Kaspersky OpenTIP ของ LumaCue v0.8.6](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.6-dynamic-analysis.png)
 
-ผลด้านบนเป็นของไฟล์และ hash ที่ระบุเท่านั้น ไม่ใช่ผลสแกนของ installer หรือไฟล์อื่น ดาวน์โหลด LumaCue จากหน้า release ของ repo นี้เท่านั้น
+ผลตรวจด้านบนใช้กับไฟล์และ hash ที่ระบุเท่านั้น ไม่ได้ครอบคลุม installer หรือไฟล์อื่น ๆ ควรดาวน์โหลด LumaCue จากหน้า release ของ repo นี้เท่านั้น
 
 ## แก้ปัญหาเบื้องต้น
 
-- **ควรโหลดไฟล์ไหน?** ถ้ามีอินเทอร์เน็ต ใช้ `LumaCue-Setup-Online.exe` ถ้าจะติดตั้งตอนออฟไลน์ ใช้ `LumaCue-Setup-Offline-<version>.exe`
-- **Twitch ขอให้เชื่อมใหม่?** กด **Reconnect** ฝั่ง Broadcaster ได้เลย reward และการตั้งค่ารับเพลงจะยังอยู่
-- **สร้าง Channel Points ไม่ได้?** ช่องต้องเป็น Twitch Affiliate หรือ Partner ก่อน
-- **OBS overlay ว่าง?** เช็กว่า LumaCue เปิดอยู่ และใช้ `http://127.0.0.1:5000/overlay-player.html`
+- **ควรดาวน์โหลดไฟล์ไหน?** ถ้าเครื่องเชื่อมต่ออินเทอร์เน็ต ให้ใช้ `LumaCue-Setup-Online.exe` ถ้าต้องติดตั้งแบบออฟไลน์ ให้ใช้ `LumaCue-Setup-Offline-<version>.exe`
+- **Twitch ขอให้เชื่อมบัญชีใหม่?** กด **Reconnect** ในส่วน Broadcaster ได้เลย รางวัลและการตั้งค่ารับคำขอเพลงเดิมจะยังอยู่
+- **สร้างรางวัล Channel Points ไม่ได้?** ช่อง Twitch ต้องมีสถานะ Affiliate หรือ Partner ก่อนจึงจะใช้ฟีเจอร์นี้ได้
+- **OBS overlay ไม่แสดงข้อมูล?** ตรวจว่า LumaCue ยังเปิดอยู่ และตั้ง URL ของ Browser Source เป็น `http://127.0.0.1:5000/overlay-player.html`
 
 ## ซอร์สโค้ด
 
-ตอนนี้ซอร์สโค้ดของ LumaCue ยังเป็น private ส่วน repo นี้เก็บตัวติดตั้ง ไฟล์อัปเดต changelog และคู่มือสำหรับคนใช้โปรแกรม
+ตอนนี้ซอร์สโค้ดของ LumaCue ยังไม่ได้เปิดเป็นสาธารณะ ส่วน repo นี้เอาไว้เก็บตัวติดตั้ง ไฟล์อัปเดต changelog และคู่มือการใช้งาน
 
-อนาคตอาจเปิดเป็น open source ถ้าพร้อม เมื่อถึงตอนนั้นค่อยเพิ่มเอกสารสำหรับนักพัฒนา
+ในอนาคตอาจเปิดซอร์สโค้ดเมื่อพร้อม และจะเพิ่มเอกสารสำหรับนักพัฒนาในตอนนั้น
