@@ -4,6 +4,15 @@ Product release notes for LumaCue desktop builds. Public releases contain built 
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.6 - Hotfix: Twitch Chat Song Selection
+
+### Fixed
+- Updated duplicate-title selection so viewers can choose a displayed artist, provide another artist, replace the query, or reply with a supported track URL without incorrectly appending it to the original title.
+- Limited free-form selection replies to Twitch replies targeting the LumaCue prompt or messages beginning with `!pick`, so ordinary viewer chat is no longer sent to the music resolver.
+- Correlated replies with the latest selection prompt to prevent delayed responses from an older prompt from choosing the wrong track.
+- Rejected YouTube and Spotify playlist links from Channel Points requests and selection replies, with a clear request for a single-track link instead.
+- Preserved YouTube `watch?v=...&list=...` track links by removing only the playlist context and resolving the video identified by `v=`.
+
 ## 0.8.5 - Hotfix: First Track Title After Startup
 
 ### Fixed
