@@ -15,24 +15,24 @@
   &nbsp;|&nbsp;
   <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest">Download for Windows</a>
   &nbsp;|&nbsp;
-  <a href="CHANGELOG_EN.md">Changelog</a>
+  <a href="CHANGELOG_EN.md">Release updates</a>
 </p>
 
 ## Download
 
-**Recommended for most users: Online Setup**
+**Have an internet connection? Use Online Setup.**
 
 1. Open the [latest release](https://github.com/xyhoxx/lumacue-releases/releases/latest).
 2. Under **Assets**, download `LumaCue-Setup-Online.exe`.
 3. Run the installer, then open LumaCue from Start Menu or the desktop shortcut.
 
-`LumaCue-Setup-Online.exe` is the smallest and quickest installer. It downloads the current app during setup, so an internet connection is required.
+`LumaCue-Setup-Online.exe` is the smallest and quickest option. It downloads the latest LumaCue build while installing, so it needs an internet connection.
 
 Use `LumaCue-Setup-Offline-<version>.exe` when you want to save the full installer for a PC that will be offline during installation.
 
 | File | Use it when... | Intended for |
 | --- | --- | --- |
-| `LumaCue-Setup-Online.exe` | You have internet access and want the fastest, smallest installer. | Recommended for most users |
+| `LumaCue-Setup-Online.exe` | You have internet access and want a quick install. | Recommended option |
 | `LumaCue-Setup-Offline-<version>.exe` | The PC will be offline during installation, or you want to keep a full installer. | Offline or reusable installation |
 | `LumaCue-win-x64-<version>.zip` | You want to use LumaCue as a portable app without installing it. | People who do not want to install |
 | `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | Never for a normal manual install. | Managed automatically by the updater |
@@ -48,11 +48,11 @@ Use `LumaCue-Setup-Offline-<version>.exe` when you want to save the full install
    http://127.0.0.1:5000/overlay-player.html
    ```
 
-## Why LumaCue?
+## What LumaCue Does
 
 - Let viewers request songs through Twitch Channel Points.
-- Keep requests manageable with queue controls, global Blocklist, learned rules, and Auto DJ.
-- Show now-playing and queue overlays in OBS with a stable local Browser Source URL.
+- Reorder, remove, and manage requests with the global Blocklist, learned rules, and Auto DJ.
+- Show the current track and queue in OBS through one stable Browser Source URL.
 - Add YouTube, YouTube Music, Spotify track or playlist links, and local audio files.
 - Run locally on your Windows PC with a desktop control surface and Discord Rich Presence.
 
@@ -71,19 +71,19 @@ Use `LumaCue-Setup-Offline-<version>.exe` when you want to save the full install
 
 ### Security Verification
 
-LumaCue `v0.8.5` was analyzed by [Kaspersky OpenTIP](https://opentip.kaspersky.com/C83E8CFFAAFB4F9FFF39E00EDD936720F563A6C842A168F9A43B2F07EE12C793/results). The analyzed file is `LumaCue.exe` inside `LumaCue-app-win-x64-0.8.5.zip`, with the following SHA-256:
+The checked file is `LumaCue.exe` inside `LumaCue-app-win-x64-0.8.6.zip`. Its SHA-256 is:
 
-`C83E8CFFAAFB4F9FFF39E00EDD936720F563A6C842A168F9A43B2F07EE12C793`
+`78F1EF8EB881B09A91F46E4181A619F8D8504F479CAD412A8942757B86FFAA36`
 
-The dynamic analysis reports `0` detections and `0` suspicious activities. It lists `1` network activity and `2` extracted files as not categorized; these are not threat detections.
+[VirusTotal](https://www.virustotal.com/gui/file/78f1ef8eb881b09a91f46e4181a619f8d8504f479cad412a8942757b86ffaa36/detection) reported `0/68`: no security vendor flagged the file as malicious at the time of the scan.
 
-![Kaspersky OpenTIP dynamic analysis for LumaCue v0.8.5](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.5-dynamic-analysis.png)
+![VirusTotal scan result for LumaCue v0.8.6](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.6-detection.png)
 
-VirusTotal scanned the same file hash with 69 security vendors, and **none flagged it as malicious (`0/69`)** at the time of the scan ([view the scan result](https://www.virustotal.com/gui/file/c83e8cffaafb4f9fff39e00edd936720f563a6c842a168f9a43b2f07ee12c793/detection)).
+[Kaspersky OpenTIP](https://opentip.kaspersky.com/78F1EF8EB881B09A91F46E4181A619F8D8504F479CAD412A8942757B86FFAA36/results) reported `0` detections and `0` suspicious activities. Its single network activity was rated Good. Two extracted files were not categorized, which is not a malware detection.
 
-![VirusTotal detection result for LumaCue v0.8.5](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.5-detection.png)
+![Kaspersky OpenTIP analysis for LumaCue v0.8.6](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.6-dynamic-analysis.png)
 
-This result applies only to the file and hash above. Always download installers from the official release page.
+These results cover only the file and hash above, not the installer or every release asset. Download LumaCue only from this repository's release page.
 
 ## Troubleshooting
 
@@ -94,6 +94,6 @@ This result applies only to the file and hash above. Always download installers 
 
 ## Source Code
 
-LumaCue source code is currently private while the project continues to mature. The public repository hosts installers, update packages, release notes, and setup guidance only.
+LumaCue source code is currently private. This public repository contains installers, update packages, release notes, and setup help for users.
 
-Open source is a possibility for the future. Any contributor and developer documentation will be published when that decision is made.
+LumaCue may become open source in the future. Developer documentation will be added if and when that happens.
