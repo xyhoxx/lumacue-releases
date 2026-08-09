@@ -4,6 +4,14 @@ What changed in each public LumaCue release, from `0.1.1` through the latest ver
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.7 - Hotfix: Shorter Twitch Request Replies
+
+### Improved
+- Shortened viewer-facing Twitch replies without changing search, queue, redemption, or refund behavior.
+- Duplicate, currently playing, blocked, not-found, and playlist-request replies no longer repeat long details in chat.
+- Kept artist-name and `!pick` recovery for ambiguous requests while making the prompt easier to scan.
+- Very long song or artist names in queue confirmations are shortened with `...`; the full track data remains unchanged.
+
 ## 0.8.6 - Hotfix: Twitch Chat Song Selection
 
 ### Fixed
