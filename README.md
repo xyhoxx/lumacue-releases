@@ -71,19 +71,19 @@
 
 ### ผลตรวจสอบความปลอดภัย
 
-ไฟล์ที่ตรวจคือ `LumaCue.exe` ใน `LumaCue-app-win-x64-0.8.6.zip` โดยมี SHA-256:
+ไฟล์ที่ตรวจคือ `LumaCue.exe` ใน `LumaCue-app-win-x64-0.8.7.zip` โดยมี SHA-256:
 
-`78F1EF8EB881B09A91F46E4181A619F8D8504F479CAD412A8942757B86FFAA36`
+`D416F485259965293FBBFB43204316FCEA951B9500732C293767C4A595F73E9B`
 
-[VirusTotal](https://www.virustotal.com/gui/file/78f1ef8eb881b09a91f46e4181a619f8d8504f479cad412a8942757b86ffaa36/detection) รายงานผล `0/68` หมายความว่าไม่มีผู้ให้บริการสแกนรายใดแจ้งว่าไฟล์นี้เป็นอันตรายในตอนที่ตรวจ
+[VirusTotal](https://www.virustotal.com/gui/file/d416f485259965293fbbfb43204316fcea951b9500732c293767c4a595f73e9b) รายงานผล `0/69` หมายความว่าไม่มีผู้ให้บริการสแกนรายใดแจ้งว่าไฟล์นี้เป็นอันตรายในตอนที่ตรวจ
 
-![ผลสแกน VirusTotal ของ LumaCue v0.8.6](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.6-detection.png)
+![ผลสแกน VirusTotal ของ LumaCue v0.8.7](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.7-detection.png)
 
-[Kaspersky OpenTIP](https://opentip.kaspersky.com/78F1EF8EB881B09A91F46E4181A619F8D8504F479CAD412A8942757B86FFAA36/results) รายงาน `0` detections และ `0` suspicious activities ส่วน network activity `1` รายการถูกจัดเป็น Good ขณะที่ไฟล์ที่แยกออกมา `2` รายการยังไม่ได้จัดหมวดหมู่ ซึ่งไม่ใช่การแจ้งเตือนมัลแวร์
+ผลตรวจ [Kaspersky OpenTIP](https://opentip.kaspersky.com/78F1EF8EB881B09A91F46E4181A619F8D8504F479CAD412A8942757B86FFAA36/results) ที่มีอยู่เป็นหลักฐานของไฟล์ v0.8.6: รายงาน `0` detections และ `0` suspicious activities ส่วน network activity `1` รายการถูกจัดเป็น Good ขณะที่ไฟล์ที่แยกออกมา `2` รายการยังไม่ได้จัดหมวดหมู่ ซึ่งไม่ใช่การแจ้งเตือนมัลแวร์
 
 ![ผลวิเคราะห์ Kaspersky OpenTIP ของ LumaCue v0.8.6](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.6-dynamic-analysis.png)
 
-ผลตรวจด้านบนใช้กับไฟล์และ hash ที่ระบุเท่านั้น ไม่ได้ครอบคลุม installer หรือไฟล์อื่น ๆ ควรดาวน์โหลด LumaCue จากหน้า release ของ repo นี้เท่านั้น
+ผลตรวจแต่ละส่วนใช้กับไฟล์และ hash ที่ระบุในส่วนนั้นเท่านั้น ไม่ได้ครอบคลุม installer หรือไฟล์อื่น ๆ ควรดาวน์โหลด LumaCue จากหน้า release ของ repo นี้เท่านั้น
 
 ## แก้ปัญหาเบื้องต้น
 
