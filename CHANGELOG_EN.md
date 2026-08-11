@@ -4,6 +4,12 @@ What changed in each public LumaCue release, from `0.1.1` through the latest ver
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.8 - Hotfix: Twitch Replies to the Fixed Bot
+
+### Fixed
+- Fixed artist and song-choice replies to `xyhoxx_bot` when Twitch prefixes the reply text with `@xyhoxx_bot`. LumaCue now removes only that leading fixed-bot mention before matching, so a reply such as `@xyhoxx_bot BTS` searches for `BTS` normally.
+- Handles both plain chat text and EventSub mention fragments without changing ordinary song requests or mentions of other chat users.
+
 ## 0.8.7 - Hotfix: Shorter Twitch Request Replies
 
 ### Improved
