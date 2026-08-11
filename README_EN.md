@@ -71,13 +71,13 @@ Use `LumaCue-Setup-Offline-<version>.exe` when you want to save the full install
 
 ### Security Verification
 
-The checked file is `LumaCue.exe` inside `LumaCue-app-win-x64-0.8.7.zip`. Its SHA-256 is:
+The checked file is `LumaCue.exe` inside `LumaCue-app-win-x64-0.8.8.zip`. Its SHA-256 is:
 
-`D416F485259965293FBBFB43204316FCEA951B9500732C293767C4A595F73E9B`
+`AE7D0B15DF7BEF79289551684694EC315A6BC083362331611A22CBE4F4BC6B4C`
 
-[VirusTotal](https://www.virustotal.com/gui/file/d416f485259965293fbbfb43204316fcea951b9500732c293767c4a595f73e9b) reported `0/69`: no security vendor flagged the file as malicious at the time of the scan.
+[VirusTotal](https://www.virustotal.com/gui/file/ae7d0b15df7bef79289551684694ec315a6bc083362331611a22cbe4f4bc6b4c) reported `0/68`: no security vendor flagged the file as malicious at the time of the scan.
 
-![VirusTotal scan result for LumaCue v0.8.7](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.7-detection.png)
+![VirusTotal scan result for LumaCue v0.8.8](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.8-detection.png)
 
 The available [Kaspersky OpenTIP](https://opentip.kaspersky.com/78F1EF8EB881B09A91F46E4181A619F8D8504F479CAD412A8942757B86FFAA36/results) result is evidence for the v0.8.6 file: it reported `0` detections and `0` suspicious activities. Its single network activity was rated Good. Two extracted files were not categorized, which is not a malware detection.
 
