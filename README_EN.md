@@ -71,17 +71,17 @@ Use `LumaCue-Setup-Offline-<version>.exe` when you want to save the full install
 
 ### Security Verification
 
-The checked file is `LumaCue.exe` inside `LumaCue-app-win-x64-0.8.8.zip`. Its SHA-256 is:
+The checked file is `LumaCue.exe` inside `LumaCue-app-win-x64-0.8.11.zip`. Its SHA-256 is:
 
-`AE7D0B15DF7BEF79289551684694EC315A6BC083362331611A22CBE4F4BC6B4C`
+`B49A5EE1AF577CA78836B1DB6B5022344B69E3194EF6BE0AE1719EBBE297AA13`
 
-[VirusTotal](https://www.virustotal.com/gui/file/ae7d0b15df7bef79289551684694ec315a6bc083362331611a22cbe4f4bc6b4c) reported `0/68`: no security vendor flagged the file as malicious at the time of the scan.
+[VirusTotal](https://www.virustotal.com/gui/file/b49a5ee1af577ca78836b1db6b5022344b69e3194ef6be0ae1719ebbe297aa13) reported `0/69`: no security vendor flagged the file as malicious at the time of the scan.
 
-![VirusTotal scan result for LumaCue v0.8.8](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.8-detection.png)
+![VirusTotal scan result for LumaCue v0.8.11](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.11-detection.png)
 
-The available [Kaspersky OpenTIP](https://opentip.kaspersky.com/78F1EF8EB881B09A91F46E4181A619F8D8504F479CAD412A8942757B86FFAA36/results) result is evidence for the v0.8.6 file: it reported `0` detections and `0` suspicious activities. Its single network activity was rated Good. Two extracted files were not categorized, which is not a malware detection.
+[Kaspersky OpenTIP](https://opentip.kaspersky.com/B49A5EE1AF577CA78836B1DB6B5022344B69E3194EF6BE0AE1719EBBE297AA13/results) analyzed the same file hash and reported `0` detections, `0` suspicious activities, `0` extracted files, and `0` network activities in this scan.
 
-![Kaspersky OpenTIP analysis for LumaCue v0.8.6](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.6-dynamic-analysis.png)
+![Kaspersky OpenTIP analysis for LumaCue v0.8.11](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.11-dynamic-analysis.png)
 
 Each result applies only to the file and hash named in its own subsection, not the installer or every release asset. Download LumaCue only from this repository's release page.
 
