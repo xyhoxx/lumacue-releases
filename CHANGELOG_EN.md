@@ -4,11 +4,12 @@ What changed in each public LumaCue release, from `0.1.1` through the latest ver
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
-## 0.8.9 - Hotfix: Auto DJ Duplicate Versions
+## 0.8.10 - Hotfix: Auto DJ Duplicate Versions
 
 ### Fixed
 - Auto DJ now skips alternate uploads of the same song before filling the queue, including `Live Session`, `Acoustic`, `Remix`, `Official Video`, `Official Audio`, and similar version labels.
 - The check runs both while discovering related tracks and again before queue insertion, so a different upload of a song already playing or queued does not slip through.
+- Update packages now exclude temporary Python `pip` staging folders, preventing release packaging from failing when one disappears during archive creation.
 
 ## 0.8.8 - Hotfix: Twitch Replies to the Fixed Bot
 
