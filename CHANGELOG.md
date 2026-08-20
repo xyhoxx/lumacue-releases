@@ -4,7 +4,7 @@
 
 **ภาษา:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
-## 0.8.10 - Hotfix: Auto DJ ไม่หยิบเพลงเวอร์ชันซ้ำ
+## 0.8.11 - Hotfix: Auto DJ ไม่หยิบเพลงเวอร์ชันซ้ำ
 
 ### แก้ไข
 - Auto DJ จะตัดเพลงที่เป็นเพลงเดียวกันแต่เป็นคนละอัปโหลดออกก่อนเติมคิว เช่น `Live Session`, `Acoustic`, `Remix`, `Official Video`, `Official Audio` และเวอร์ชันใกล้เคียง
