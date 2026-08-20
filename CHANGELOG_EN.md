@@ -4,7 +4,7 @@ What changed in each public LumaCue release, from `0.1.1` through the latest ver
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
-## 0.8.10 - Hotfix: Auto DJ Duplicate Versions
+## 0.8.11 - Hotfix: Auto DJ Duplicate Versions
 
 ### Fixed
 - Auto DJ now skips alternate uploads of the same song before filling the queue, including `Live Session`, `Acoustic`, `Remix`, `Official Video`, `Official Audio`, and similar version labels.
