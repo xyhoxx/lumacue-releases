@@ -4,6 +4,14 @@ What changed in each public LumaCue release, from `0.1.1` through the latest ver
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.12 - Hotfix: Exclude Session Tracks from Auto DJ
+
+### Fixed
+- Auto DJ now excludes titles containing standalone `Session` or `Sessions` labels, including `Live Session`, `Studio Session`, and `Acoustic Sessions`, even when the track is not a duplicate of the current song or queue.
+- The filter covers discovery, saved tracks, and play history, with checks during discovery and immediately before queue insertion. Manually added tracks are unchanged.
+- Improved duplicate matching for titles ending in source credits such as `(From ...)`, while retaining artist compatibility checks to avoid rejecting unrelated songs.
+- Words that only contain the same letters, such as `Obsession`, are not filtered.
+
 ## 0.8.11 - Hotfix: Auto DJ Duplicate Versions
 
 ### Fixed
