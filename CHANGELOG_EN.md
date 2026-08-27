@@ -4,6 +4,13 @@ What changed in each public LumaCue release, from `0.1.1` through the latest ver
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.13 - Hotfix: Auto DJ Queue Refill
+
+### Fixed
+- Fixed Auto DJ stopping queue refills when the LumaCue window was minimized or hidden because queue maintenance depended on the desktop shell polling for state.
+- After the next track is removed from the queue, the backend now schedules a refill immediately in a background task without delaying the track change or waiting for the window to reopen.
+- Preserved the existing empty-queue fallback and queue update broadcasts.
+
 ## 0.8.12 - Hotfix: Exclude Session Tracks from Auto DJ
 
 ### Fixed
