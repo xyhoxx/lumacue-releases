@@ -4,6 +4,14 @@ What changed in each public LumaCue release, from `0.1.1` through the latest ver
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.14 - Hotfix: More Varied and Reliable Auto DJ Refills
+
+### Fixed
+- Fixed Auto DJ repeatedly taking the first result from the same primary seed, which made consecutive queue additions favor one artist too heavily.
+- Related results are now interleaved across the current track, upcoming queue, and recent listening context. Final selection is randomized among the least-repeated artists to improve variety while keeping suggestions relevant to the current session.
+- Removed the artist-name-only lookup that reinforced same-artist runs. Broad song discovery is now used when related-track lookups do not provide enough usable candidates.
+- Background refill now retries up to two times after a temporary empty result, stopping when Auto DJ is disabled or the queue reaches its configured target.
+
 ## 0.8.13 - Hotfix: Auto DJ Queue Refill
 
 ### Fixed
