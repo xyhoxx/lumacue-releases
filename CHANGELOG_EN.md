@@ -4,6 +4,14 @@ What changed in each public LumaCue release, from `0.1.1` through the latest ver
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.16 - Hotfix: Keep Compilations and Long Videos Out of Auto DJ
+
+### Fixed
+- Auto DJ skips tracks explicitly labeled as AI-generated in the title, artist, or album, along with titles labeled as compilations or continuous mixes.
+- Videos longer than 15 minutes are excluded. Duration is read from both numeric seconds and YouTube Music's `length` format such as `40:00`.
+- The filter covers discovery, saved songs, and play history. Viewer requests and manually added songs are unchanged.
+- Unlabeled AI-generated tracks cannot be identified reliably from the available song metadata; the existing blocklist remains available for specific tracks or artists.
+
 ## 0.8.15 - Hotfix: One-Click Auto DJ Disable and More Relevant Picks
 
 ### Fixed
