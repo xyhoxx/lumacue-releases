@@ -4,6 +4,14 @@ What changed in each public LumaCue release, from `0.1.1` through the latest ver
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.15 - Hotfix: One-Click Auto DJ Disable and More Relevant Picks
+
+### Fixed
+- Turning off Auto DJ now stops an in-flight discovery from adding more tracks. The enabled state and queue target are checked again before each insertion.
+- Fixed the queue controls reverting after Auto DJ is switched off when an older settings response arrives late or the toggle is changed quickly.
+- While music is playing, Auto DJ prioritizes tracks discovered from the current song and queue over saved songs and play history, reducing unrelated picks.
+- With a Thai-language track playing, discovery and fallback picks now favor Thai-language context instead of drifting into unrelated results such as opera. Broad discovery remains available when there is no live context or no related result.
+
 ## 0.8.14 - Hotfix: More Varied and Reliable Auto DJ Refills
 
 ### Fixed
