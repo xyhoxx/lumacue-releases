@@ -1,99 +1,67 @@
 # LumaCue
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/lumacue-icon.png" alt="LumaCue" width="132">
-</p>
+[ไทย](README.md) | [English](README_EN.md)
 
-<p align="center">
-  <strong>Twitch song requests, queue control, Auto DJ, and OBS music overlays for Windows streamers.</strong>
-</p>
+LumaCue is a music player for Twitch streams on Windows 10 or newer. Viewers can request songs through Channel Points while you manage the queue, let Auto DJ fill gaps, and show the current track in OBS.
 
-<p align="center">
-  <a href="README.md">TH</a>
-  &nbsp;|&nbsp;
-  <a href="README_EN.md"><strong>EN</strong></a>
-  &nbsp;|&nbsp;
-  <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest">Download for Windows</a>
-  &nbsp;|&nbsp;
-  <a href="CHANGELOG_EN.md">Release updates</a>
-</p>
+**Get started:** [Download Online Setup](https://github.com/xyhoxx/lumacue-releases/releases/latest/download/LumaCue-Setup-Online.exe) (internet required), or [see every file in the latest release](https://github.com/xyhoxx/lumacue-releases/releases/latest).
 
-## Download
+## Which file do I need?
 
-**Have an internet connection? Use Online Setup.**
+- **Regular install:** `LumaCue-Setup-Online.exe` is small and downloads the app during setup.
+- **Install without internet:** `LumaCue-Setup-Offline-<version>.exe` includes everything needed and can be kept for later.
+- **No installer:** Extract `LumaCue-win-x64-<version>.zip` and run the portable app.
 
-1. Open the [latest release](https://github.com/xyhoxx/lumacue-releases/releases/latest).
-2. Under **Assets**, download `LumaCue-Setup-Online.exe`.
-3. Run the installer, then open LumaCue from Start Menu or the desktop shortcut.
+Files named `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, and manifest files are for the updater. You do not need to download them yourself.
 
-`LumaCue-Setup-Online.exe` is the smallest and quickest option. It downloads the latest LumaCue build while installing, so it needs an internet connection.
+## Set up your stream
 
-Use `LumaCue-Setup-Offline-<version>.exe` when you want to save the full installer for a PC that will be offline during installation.
-
-| File | Use it when... | Intended for |
-| --- | --- | --- |
-| `LumaCue-Setup-Online.exe` | You have internet access and want a quick install. | Recommended option |
-| `LumaCue-Setup-Offline-<version>.exe` | The PC will be offline during installation, or you want to keep a full installer. | Offline or reusable installation |
-| `LumaCue-win-x64-<version>.zip` | You want to use LumaCue as a portable app without installing it. | People who do not want to install |
-| `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | Never for a normal manual install. | Managed automatically by the updater |
-
-## Quick Start
-
-1. **Install LumaCue** using the online installer, or the offline installer when needed.
-2. Open **Twitch** in LumaCue and connect your **Broadcaster** account. Use **Reconnect** whenever LumaCue asks for newly required Twitch permissions.
-3. Create or select the Channel Points reward, then start listening.
-4. In OBS, add a **Browser Source** using:
+1. Open LumaCue and add music from search, YouTube or YouTube Music links, Spotify links, or audio files on your PC.
+2. For viewer requests, open **Twitch**, connect your **Broadcaster** account, choose a Channel Points reward, and start listening. Custom Channel Points rewards require a Twitch Affiliate or Partner channel.
+3. To show music in OBS, add a **Browser Source** with this URL. Keep LumaCue open while streaming:
 
    ```text
    http://127.0.0.1:5000/overlay-player.html
    ```
 
-## What LumaCue Does
+You can also use LumaCue as a music player without connecting Twitch or OBS.
 
-- Let viewers request songs through Twitch Channel Points.
-- Reorder, remove, and manage requests with the global Blocklist, learned rules, and Auto DJ.
-- Show the current track and queue in OBS through one stable Browser Source URL.
-- Add YouTube, YouTube Music, Spotify track or playlist links, and local audio files.
-- Run locally on your Windows PC with a desktop control surface and Discord Rich Presence.
+## While you're live
 
-## Requirements
+- Reorder or remove queued songs and block tracks or artists you do not want played.
+- Let Auto DJ fill an emptying queue without replacing viewer requests.
+- Show the current track and queue in OBS; the Browser Source URL stays the same between songs.
+- Show your music in Discord with Rich Presence.
 
-- Windows 10 or newer
-- Internet connection for Online Setup, updates, and online music resolution
-- OBS Browser Source for overlays
-- Twitch Affiliate or Partner status for Channel Points Custom Rewards
+## Data and security
 
-## Privacy and Security
+Your queue, settings, imported local music, and overlay settings stay on your PC. Twitch tokens are stored locally and protected with Windows DPAPI. The Twitch client secret is held by the account connection service, not bundled with the desktop app.
 
-- LumaCue runs its playback queue, settings, local music library, and overlay service on your PC.
-- Twitch tokens are stored locally and protected with Windows DPAPI.
-- The desktop app does not contain the Twitch client secret. The authorization service keeps that secret server-side.
+If antivirus software warns about LumaCue, do not disable protection or add an exclusion right away. Check the file and where you downloaded it. The reports below cover **one v0.8.11 executable only**, not the latest release or every installer.
 
-### Security Verification
+<details>
+<summary>Scan results for LumaCue.exe v0.8.11</summary>
 
-The checked file is `LumaCue.exe` inside `LumaCue-app-win-x64-0.8.11.zip`. Its SHA-256 is:
+`LumaCue.exe` inside `LumaCue-app-win-x64-0.8.11.zip` has SHA-256:
 
 `B49A5EE1AF577CA78836B1DB6B5022344B69E3194EF6BE0AE1719EBBE297AA13`
 
-[VirusTotal](https://www.virustotal.com/gui/file/b49a5ee1af577ca78836b1db6b5022344b69e3194ef6be0ae1719ebbe297aa13) reported `0/69`: no security vendor flagged the file as malicious at the time of the scan.
+[VirusTotal](https://www.virustotal.com/gui/file/b49a5ee1af577ca78836b1db6b5022344b69e3194ef6be0ae1719ebbe297aa13) showed `0/69` at the time of the scan: no participating vendor flagged that exact hash in that scan.
 
 ![VirusTotal scan result for LumaCue v0.8.11](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.11-detection.png)
 
-[Kaspersky OpenTIP](https://opentip.kaspersky.com/B49A5EE1AF577CA78836B1DB6B5022344B69E3194EF6BE0AE1719EBBE297AA13/results) analyzed the same file hash and reported `0` detections, `0` suspicious activities, `0` extracted files, and `0` network activities in this scan.
+[Kaspersky OpenTIP](https://opentip.kaspersky.com/B49A5EE1AF577CA78836B1DB6B5022344B69E3194EF6BE0AE1719EBBE297AA13/results) reported `0` detections and `0` suspicious activities for the same hash in its scan.
 
 ![Kaspersky OpenTIP analysis for LumaCue v0.8.11](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.11-dynamic-analysis.png)
 
-Each result applies only to the file and hash named in its own subsection, not the installer or every release asset. Download LumaCue only from this repository's release page.
+</details>
 
-## Troubleshooting
+## If something isn't working
 
-- **Which file should I download?** Use `LumaCue-Setup-Online.exe` when you have internet access. Use `LumaCue-Setup-Offline-<version>.exe` for an offline installation.
-- **Twitch asks to reconnect?** Use the Broadcaster **Reconnect** button. It refreshes authorization without clearing your reward or listener setup.
-- **Channel Points reward cannot be created?** Twitch requires Affiliate or Partner status.
-- **OBS overlay is blank?** Confirm LumaCue is running and use `http://127.0.0.1:5000/overlay-player.html`.
+- **Twitch asks for new permissions:** Use **Reconnect** on the Broadcaster account. You do not need to remove your reward or set it up again.
+- **Can't create a Channel Points reward:** Check that your channel has Twitch Affiliate or Partner status.
+- **OBS shows no track:** Keep LumaCue running and check that the Browser Source URL matches the one above.
 
-## Source Code
+[See what changed in each release](CHANGELOG_EN.md).
 
-LumaCue source code is currently private. This public repository contains installers, update packages, release notes, and setup help for users.
-
-LumaCue may become open source in the future. Developer documentation will be added if and when that happens.
+The source code is not public yet. This repository hosts installers and update files; if the source is opened later, details will be added here.
