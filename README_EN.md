@@ -16,7 +16,7 @@ Files named `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml
 
 ## Set up your stream
 
-1. Open LumaCue and add music from search, YouTube or YouTube Music links, Spotify links, or audio files on your PC.
+1. Open LumaCue and add music from search, YouTube or YouTube Music links, Spotify tracks or playlists, or audio files on your PC.
 2. For viewer requests, open **Twitch**, connect your **Broadcaster** account, choose a Channel Points reward, and start listening. Custom Channel Points rewards require a Twitch Affiliate or Partner channel.
 3. To show music in OBS, add a **Browser Source** with this URL. Keep LumaCue open while streaming:
 
@@ -25,6 +25,8 @@ Files named `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml
    ```
 
 You can also use LumaCue as a music player without connecting Twitch or OBS.
+
+Searching for online music and updating the app require an internet connection.
 
 ## While you're live
 
