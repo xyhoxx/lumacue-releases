@@ -1,99 +1,67 @@
 # LumaCue
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/lumacue-icon.png" alt="LumaCue" width="132">
-</p>
+[ไทย](README.md) | [English](README_EN.md)
 
-<p align="center">
-  <strong>แอปบน Windows สำหรับรับเพลงที่คนดูขอผ่าน Twitch จัดการคิว และแสดงข้อมูลเพลงบน OBS</strong>
-</p>
+LumaCue เป็นแอปเล่นเพลงสำหรับสตรีมบน Windows 10 ขึ้นไป คนดูขอเพลงผ่าน Twitch ได้ ส่วนคุณจัดคิว เปิด Auto DJ และเอาชื่อเพลงที่กำลังเล่นไปขึ้นใน OBS ได้จากแอปเดียว
 
-<p align="center">
-  <a href="README.md"><strong>TH</strong></a>
-  &nbsp;|&nbsp;
-  <a href="README_EN.md">EN</a>
-  &nbsp;|&nbsp;
-  <a href="https://github.com/xyhoxx/lumacue-releases/releases/latest">ดาวน์โหลดสำหรับ Windows</a>
-  &nbsp;|&nbsp;
-  <a href="CHANGELOG.md">ประวัติการอัปเดต</a>
-</p>
+**เริ่มใช้:** [ดาวน์โหลด Setup Online](https://github.com/xyhoxx/lumacue-releases/releases/latest/download/LumaCue-Setup-Online.exe) (ต้องมีอินเทอร์เน็ต) หรือ [ดูไฟล์ทั้งหมดในรุ่นล่าสุด](https://github.com/xyhoxx/lumacue-releases/releases/latest)
 
-## ดาวน์โหลด
+## เลือกไฟล์ดาวน์โหลด
 
-**ถ้ามีอินเทอร์เน็ต แนะนำให้ใช้ Setup Online**
+- **ติดตั้งตามปกติ:** `LumaCue-Setup-Online.exe` ไฟล์เล็ก ดาวน์โหลดโปรแกรมระหว่างติดตั้ง
+- **ติดตั้งตอนไม่มีเน็ต:** `LumaCue-Setup-Offline-<version>.exe` มีไฟล์ที่ต้องใช้ครบ เก็บไว้ติดตั้งทีหลังได้
+- **ไม่อยากติดตั้ง:** `LumaCue-win-x64-<version>.zip` แตก ZIP แล้วเปิดใช้งานแบบพกพา
 
-1. เปิดหน้า [release ล่าสุด](https://github.com/xyhoxx/lumacue-releases/releases/latest)
-2. ที่ส่วน **Assets** ดาวน์โหลด `LumaCue-Setup-Online.exe`
-3. เปิดไฟล์ติดตั้ง แล้วเปิด LumaCue จาก Start Menu หรือไอคอนลัดบนเดสก์ท็อป
+ไฟล์ `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml` และ manifest มีไว้ให้ระบบอัปเดต ไม่ต้องโหลดเอง
 
-`LumaCue-Setup-Online.exe` มีขนาดเล็กและใช้เวลาติดตั้งน้อยกว่า เพราะตัวติดตั้งจะดาวน์โหลด LumaCue รุ่นล่าสุดระหว่างการติดตั้ง จึงต้องเชื่อมต่ออินเทอร์เน็ต
+## ตั้งค่าเพื่อสตรีม
 
-ถ้าต้องการติดตั้งโดยไม่ใช้อินเทอร์เน็ต หรืออยากเก็บตัวติดตั้งแบบครบชุดไว้ใช้ภายหลัง ให้เลือก `LumaCue-Setup-Offline-<version>.exe`
-
-| ไฟล์ | เหมาะกับกรณีไหน | หมายเหตุ |
-| --- | --- | --- |
-| `LumaCue-Setup-Online.exe` | ติดตั้งบนเครื่องที่เชื่อมต่ออินเทอร์เน็ต | แนะนำสำหรับผู้ใช้ส่วนใหญ่ |
-| `LumaCue-Setup-Offline-<version>.exe` | ติดตั้งโดยไม่ใช้อินเทอร์เน็ต หรือต้องการเก็บตัวติดตั้งแบบครบชุดไว้ | ดาวน์โหลดครั้งเดียวและนำไปใช้ซ้ำได้ |
-| `LumaCue-win-x64-<version>.zip` | ต้องการเปิดโปรแกรมโดยไม่ผ่านขั้นตอนติดตั้ง | เหมาะกับการใช้งานแบบพกพา |
-| `LumaCue-app-*`, `LumaCue-runtime-*`, `LumaCue-patch-*`, `latest.yml`, manifest | ไม่ต้องโหลดเอง | LumaCue และระบบอัปเดตจะจัดการไฟล์เหล่านี้ให้ |
-
-## เริ่มต้นใช้งาน
-
-1. ติดตั้ง LumaCue ด้วย Setup Online หรือใช้ตัว Offline ถ้าต้องการติดตั้งโดยไม่ใช้อินเทอร์เน็ต
-2. เปิดหน้า **Twitch** แล้วเชื่อมบัญชี **Broadcaster** ถ้า LumaCue แจ้งว่าต้องขอสิทธิ์เพิ่ม ให้กด **Reconnect**
-3. สร้างหรือเลือกรางวัล Channel Points ที่จะใช้รับคำขอเพลง จากนั้นกดเริ่มรับเพลง
-4. เพิ่ม **Browser Source** ใน OBS ด้วย URL นี้
+1. เปิด LumaCue แล้วเพิ่มเพลงจากช่องค้นหา หรือลิงก์ YouTube, YouTube Music, Spotify และไฟล์เพลงในเครื่อง
+2. ถ้าจะให้คนดูขอเพลง เปิดหน้า **Twitch** เชื่อมบัญชี **Broadcaster** เลือกรางวัล Channel Points แล้วเริ่มรับคำขอ ช่อง Twitch ต้องเป็น Affiliate หรือ Partner จึงจะใช้รางวัลแบบนี้ได้
+3. ถ้าจะให้ OBS แสดงเพลง เพิ่ม **Browser Source** แล้วใส่ URL นี้ โดยเปิด LumaCue ทิ้งไว้ระหว่างสตรีม:
 
    ```text
    http://127.0.0.1:5000/overlay-player.html
    ```
 
-## ทำอะไรได้บ้าง
+ใช้เป็นเครื่องเล่นเพลงอย่างเดียวก็ได้ ไม่จำเป็นต้องเชื่อม Twitch หรือ OBS
 
-- เปิดให้คนดูขอเพลงผ่าน Twitch Channel Points
-- จัดลำดับ ลบ และดูแลคิวด้วย Global Blocklist, learned rules และ Auto DJ
-- แสดงเพลงที่กำลังเล่นและเพลงในคิวบน OBS ผ่าน Browser Source โดยใช้ URL เดิมได้ทุกครั้ง
-- เพิ่มเพลงจาก YouTube, YouTube Music, Spotify track/playlist และไฟล์เพลงในเครื่อง
-- ควบคุมการเล่นเพลงจากแอปบน Windows และแสดงสถานะเพลงใน Discord ผ่าน Rich Presence
+## ระหว่างสตรีม
 
-## สิ่งที่ต้องมี
+- ย้ายหรือลบเพลงในคิว และตั้ง Blocklist สำหรับเพลงหรือศิลปินที่ไม่ต้องการ
+- เปิด Auto DJ ให้ช่วยเติมคิวเมื่อเพลงเริ่มหมด โดยไม่แทนที่เพลงที่คนดูขอ
+- แสดงเพลงที่กำลังเล่นและคิวบน OBS; URL ของ Browser Source ไม่ต้องเปลี่ยนเมื่อเพลงเปลี่ยน
+- แสดงสถานะเพลงใน Discord ผ่าน Rich Presence
 
-- Windows 10 ขึ้นไป
-- อินเทอร์เน็ตสำหรับ Setup Online, อัปเดตโปรแกรม และค้นหาเพลงออนไลน์
-- OBS ที่รองรับ Browser Source ถ้าต้องการใช้ overlay
-- สถานะ Twitch Affiliate หรือ Partner ถ้าต้องการรับเพลงผ่าน Channel Points
+## ข้อมูลและความปลอดภัย
 
-## ความเป็นส่วนตัวและความปลอดภัย
+คิวเพลง การตั้งค่า เพลงที่นำเข้าจากเครื่อง และค่าของ overlay เก็บอยู่บนเครื่องของคุณ Twitch token ก็เก็บในเครื่องและป้องกันด้วย Windows DPAPI ส่วน Twitch client secret ไม่ได้อยู่ในไฟล์แอป แต่เก็บไว้ฝั่งบริการเชื่อมบัญชี
 
-- ข้อมูลคิว การตั้งค่า คลัง Local Music และค่าของ overlay จะถูกเก็บและทำงานอยู่บนเครื่องของคุณ
-- Twitch token จะถูกเก็บไว้ในเครื่อง โดยเข้ารหัสด้วย Windows DPAPI
-- แอปไม่ได้ฝัง Twitch client secret ไว้ในไฟล์โปรแกรม ข้อมูลส่วนนี้อยู่บนเซิร์ฟเวอร์ที่ใช้สำหรับเชื่อมบัญชี
+ถ้าโปรแกรมป้องกันไวรัสแจ้งเตือน อย่าเพิ่งปิดระบบป้องกันหรือเพิ่ม exclusion ให้ตรวจชื่อไฟล์และแหล่งดาวน์โหลดก่อน ผลสแกนด้านล่างเป็นของไฟล์ **v0.8.11 เท่านั้น** ไม่ใช่ผลรับรองรุ่นล่าสุดหรือตัวติดตั้งทุกไฟล์
 
-### ผลตรวจสอบความปลอดภัย
+<details>
+<summary>ดูผลสแกน LumaCue.exe รุ่น 0.8.11</summary>
 
-ไฟล์ที่ตรวจคือ `LumaCue.exe` ใน `LumaCue-app-win-x64-0.8.11.zip` โดยมี SHA-256:
+ไฟล์ `LumaCue.exe` ใน `LumaCue-app-win-x64-0.8.11.zip` มี SHA-256:
 
 `B49A5EE1AF577CA78836B1DB6B5022344B69E3194EF6BE0AE1719EBBE297AA13`
 
-[VirusTotal](https://www.virustotal.com/gui/file/b49a5ee1af577ca78836b1db6b5022344b69e3194ef6be0ae1719ebbe297aa13) รายงานผล `0/69` หมายความว่าไม่มีผู้ให้บริการสแกนรายใดแจ้งว่าไฟล์นี้เป็นอันตรายในตอนที่ตรวจ
+[VirusTotal](https://www.virustotal.com/gui/file/b49a5ee1af577ca78836b1db6b5022344b69e3194ef6be0ae1719ebbe297aa13) แสดงผล `0/69` ณ เวลาที่ตรวจ หมายถึงไม่มีผู้ให้บริการสแกนรายใดแจ้งว่าไฟล์ hash นี้เป็นอันตรายในครั้งนั้น
 
 ![ผลสแกน VirusTotal ของ LumaCue v0.8.11](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/virustotal-v0.8.11-detection.png)
 
-[Kaspersky OpenTIP](https://opentip.kaspersky.com/B49A5EE1AF577CA78836B1DB6B5022344B69E3194EF6BE0AE1719EBBE297AA13/results) วิเคราะห์ไฟล์ hash เดียวกันและรายงาน `0` detections, `0` suspicious activities, `0` extracted files และ `0` network activities ในการตรวจครั้งนี้
+[Kaspersky OpenTIP](https://opentip.kaspersky.com/B49A5EE1AF577CA78836B1DB6B5022344B69E3194EF6BE0AE1719EBBE297AA13/results) รายงาน `0` detections และ `0` suspicious activities สำหรับ hash เดียวกันในการตรวจครั้งนั้น
 
 ![ผลวิเคราะห์ Kaspersky OpenTIP ของ LumaCue v0.8.11](https://raw.githubusercontent.com/xyhoxx/lumacue-releases/master/assets/security/opentip-v0.8.11-dynamic-analysis.png)
 
-ผลตรวจแต่ละส่วนใช้กับไฟล์และ hash ที่ระบุในส่วนนั้นเท่านั้น ไม่ได้ครอบคลุม installer หรือไฟล์อื่น ๆ ควรดาวน์โหลด LumaCue จากหน้า release ของ repo นี้เท่านั้น
+</details>
 
-## แก้ปัญหาเบื้องต้น
+## ถ้าใช้งานติดขัด
 
-- **ควรดาวน์โหลดไฟล์ไหน?** ถ้าเครื่องเชื่อมต่ออินเทอร์เน็ต ให้ใช้ `LumaCue-Setup-Online.exe` ถ้าต้องติดตั้งแบบออฟไลน์ ให้ใช้ `LumaCue-Setup-Offline-<version>.exe`
-- **Twitch ขอให้เชื่อมบัญชีใหม่?** กด **Reconnect** ในส่วน Broadcaster ได้เลย รางวัลและการตั้งค่ารับคำขอเพลงเดิมจะยังอยู่
-- **สร้างรางวัล Channel Points ไม่ได้?** ช่อง Twitch ต้องมีสถานะ Affiliate หรือ Partner ก่อนจึงจะใช้ฟีเจอร์นี้ได้
-- **OBS overlay ไม่แสดงข้อมูล?** ตรวจว่า LumaCue ยังเปิดอยู่ และตั้ง URL ของ Browser Source เป็น `http://127.0.0.1:5000/overlay-player.html`
+- **Twitch ขอสิทธิ์เพิ่ม:** กด **Reconnect** ที่บัญชี Broadcaster ไม่ต้องลบรางวัลหรือตั้งค่าใหม่
+- **สร้างรางวัล Channel Points ไม่ได้:** ตรวจว่าช่องเป็น Twitch Affiliate หรือ Partner
+- **OBS ไม่ขึ้นเพลง:** เปิด LumaCue ไว้ และตรวจ URL ของ Browser Source ให้ตรงกับด้านบน
 
-## ซอร์สโค้ด
+[ดูว่าแต่ละรุ่นเปลี่ยนอะไรบ้าง](CHANGELOG.md)
 
-ตอนนี้ซอร์สโค้ดของ LumaCue ยังไม่ได้เปิดเป็นสาธารณะ ส่วน repo นี้เอาไว้เก็บตัวติดตั้ง ไฟล์อัปเดต changelog และคู่มือการใช้งาน
-
-ในอนาคตอาจเปิดซอร์สโค้ดเมื่อพร้อม และจะเพิ่มเอกสารสำหรับนักพัฒนาในตอนนั้น
+ซอร์สโค้ดยังไม่ได้เปิดเป็นสาธารณะ repo นี้ใช้แจกตัวติดตั้งและไฟล์อัปเดต หากเปิดซอร์สโค้ดในอนาคตจะเพิ่มข้อมูลไว้ที่นี่
