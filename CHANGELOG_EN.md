@@ -1,32 +1,26 @@
-# LumaCue Updates
+# What Changed in LumaCue
 
-What changed in each public LumaCue release, from `0.1.1` through the latest version. This repository contains the built installers and update files, not the source code.
+Release notes from `0.1.1` onward.
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
-## 0.8.17 - Hotfix: More Reliable Related Picks for Auto DJ
+## 0.8.17 - Hotfix: No Broad Auto DJ Picks After a Failed Lookup
 
-### Fixed
-- Updated the YouTube Music integration to `ytmusicapi 1.12.3`, fixing related-track lookups that could fail and fall back to broad searches such as `popular songs`.
-- If any related-track lookup fails, Auto DJ now waits for the next refill attempt instead of adding tracks unrelated to the current listening context. Cold-start discovery remains available when there is no seed track.
-- The updater now tracks the Python runtime version and downloads a matching runtime when dependencies change, so existing installations receive the YouTube Music fix instead of updating only the app files.
-- Runtime versions are derived from their actual contents, avoiding another large runtime download on later hotfixes when the dependencies have not changed.
+- Fixed a YouTube Music lookup failure that could send Auto DJ to broad searches such as `popular songs`.
+- When a related-track lookup fails, Auto DJ waits for another refill attempt instead of forcing an unrelated song into the queue. It can still start from scratch when there is no track to follow.
+- Updated `ytmusicapi` to `1.12.3`. The updater now delivers the matching Python runtime to existing installs, but will not download it again in later releases unless its contents change.
 
-## 0.8.16 - Hotfix: Keep Compilations and Long Videos Out of Auto DJ
+## 0.8.16 - Hotfix: Skip Compilations and Long Videos in Auto DJ
 
-### Fixed
-- Auto DJ skips tracks explicitly labeled as AI-generated in the title, artist, or album, along with titles labeled as compilations or continuous mixes.
-- Videos longer than 15 minutes are excluded. Duration is read from both numeric seconds and YouTube Music's `length` format such as `40:00`.
-- The filter covers discovery, saved songs, and play history. Viewer requests and manually added songs are unchanged.
-- Unlabeled AI-generated tracks cannot be identified reliably from the available song metadata; the existing blocklist remains available for specific tracks or artists.
+- Auto DJ skips tracks labeled as AI-generated, compilations, or continuous mixes, as well as videos over 15 minutes.
+- The filter covers discovered songs, saved songs, and play history. Viewer requests and songs you add yourself are unchanged.
+- An AI-generated track without a label may still slip through. You can use the Blocklist for tracks or artists you do not want.
 
-## 0.8.15 - Hotfix: One-Click Auto DJ Disable and More Relevant Picks
+## 0.8.15 - Hotfix: Auto DJ Stops When You Switch It Off
 
-### Fixed
-- Turning off Auto DJ now stops an in-flight discovery from adding more tracks. The enabled state and queue target are checked again before each insertion.
-- Fixed the queue controls reverting after Auto DJ is switched off when an older settings response arrives late or the toggle is changed quickly.
-- While music is playing, Auto DJ prioritizes tracks discovered from the current song and queue over saved songs and play history, reducing unrelated picks.
-- With a Thai-language track playing, discovery and fallback picks now favor Thai-language context instead of drifting into unrelated results such as opera. Broad discovery remains available when there is no live context or no related result.
+- One click now stops Auto DJ, including a search already in progress. The queue switch no longer jumps back when an older response arrives late.
+- With music playing, Auto DJ starts with the current song and queue before saved tracks or history, making unrelated picks less likely.
+- When the current song is Thai, it favors Thai-language context. General discovery is still available when there is no track to follow or no related result.
 
 ## 0.8.14 - Hotfix: More Varied and Reliable Auto DJ Refills
 
