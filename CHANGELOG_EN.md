@@ -4,6 +4,12 @@ Release notes from `0.1.1` onward.
 
 **Language:** [ไทย](CHANGELOG.md) | [English](CHANGELOG_EN.md)
 
+## 0.8.18 - Set Your Own Playback Shortcuts
+
+- Assign shortcuts for play/pause, skip, volume up/down, and Auto DJ on/off from Shortcuts at the bottom of the sidebar.
+- Shortcuts work while another window is focused. Volume changes in 5% steps, and bindings are kept when you reopen LumaCue.
+- No keys are assigned by default. LumaCue reports duplicate or unavailable combinations. Fn cannot be recorded as a separate key.
+
 ## 0.8.17 - Hotfix: No Broad Auto DJ Picks After a Failed Lookup
 
 - Fixed a YouTube Music lookup failure that could send Auto DJ to broad searches such as `popular songs`.
